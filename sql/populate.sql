@@ -14,5 +14,20 @@ insert into class_cats (title) values ("Genes and Genomes");
 insert into class_cats (title) values ("Organismal and Systems Biology");
 insert into class_cats (title) values ("Advanced Experience");
 insert into class_cats (title) values ("Additional Biology Electives");
+
+insert into class_cats (title) values ("General Chemistry 1 with Lab");
+insert into class_cats (title) values ("General Chemistry 2 with Lab");
+insert into class_cats (title) values ("Organic Chemistry 1 with Lab");
+insert into class_cats (title) values ("Organic Chemistry 2 with Lab");
+insert into class_cats (title) values ("Biological Chemistry");
+insert into class_cats (title) values ("Biochemistry 1");
+insert into class_cats (title) values ("Calculus 1");
+insert into class_cats (title) values ("Calculus 2");
+insert into class_cats (title) values ("Biostatistics");
+insert into class_cats (title) values ("Physics 1 with Lab");
+insert into class_cats (title) values ("Physics 2 with Lab");
+insert into class_cats (title) values ("Additional Quantitative Courses");
+
+
  
 # Populate reqs:
