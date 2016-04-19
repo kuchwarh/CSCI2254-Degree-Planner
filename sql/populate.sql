@@ -40,6 +40,8 @@ insert into courses (name, dept, credits) values ("BIOL3210 Plant Biology", "Bio
 insert into courses (name, dept, credits) values ("BIOL4320 Developmental Biology", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4590 Introduction to Neuroscience", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4330 Human Physiology with Lab", "Biol", "4");
+insert into courses (name, dept, credits) values ("BIOL4350 Biological Chemistry", "Biol", "3");
+
 
 ---committed---
 insert into courses (name, dept, credits) values ("CHEM1109 General Chemistry 1", "Chem", "3");
@@ -50,6 +52,13 @@ insert into courses (name, dept, credits) values ("CHEM2231 Organic Chemistry 1"
 insert into courses (name, dept, credits) values ("CHEM2232 Organic Chemistry Lab 1", "Chem", "1");
 insert into courses (name, dept, credits) values ("CHEM2233 Organic Chemistry 2", "Chem", "3");
 insert into courses (name, dept, credits) values ("CHEM2234 Organic Chemistry 2 Lab", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM4461 Biochemistry 1", "Chem", "3");
 
 ---committed---
+insert into courses (name, dept, credits) values ("MATH1100 Calculus 1", "Math", "4");
+insert into courses (name, dept, credits) values ("MATH1101 Calculus 2", "Math", "4");
+insert into courses (name, dept, credits) values ("PHYS2100 Physics 1 with Lab", "Phys", "4");
+insert into courses (name, dept, credits) values ("PHYS2101 Physics 2 with Lab", "Phys", "4");
+insert into courses (name, dept, credits) values ("BIOL2300 Biostatistics", "Biol", "3");
+---committed still need to do statistics---
 
