@@ -41,4 +41,15 @@ insert into courses (name, dept, credits) values ("BIOL4320 Developmental Biolog
 insert into courses (name, dept, credits) values ("BIOL4590 Introduction to Neuroscience", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4330 Human Physiology with Lab", "Biol", "4");
 
+---committed---
+insert into courses (name, dept, credits) values ("CHEM1109 General Chemistry 1", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM1110 General Chemistry Lab 1", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM1111 General Chemistry 2", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM1112 General Chemistry Lab 2", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM2231 Organic Chemistry 1", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM2232 Organic Chemistry Lab 1", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM2233 Organic Chemistry 2", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM2234 Organic Chemistry 2 Lab", "Chem", "1");
+
+---committed---
 
