@@ -54,8 +54,8 @@ students(id), foreign key (field) references fields(id))  engine = InnoDB;
 
 # Create table for slots:
 
-create table slots (id int not null auto_increment, semester varchar(40) not null, 
-course_num int not null, primary key (id))  engine = InnoDB;
+create table slots (id int not null auto_increment, semester varchar(10) not null, year 
+int not null, course_num int not null, primary key (id))  engine = InnoDB;
 
 # Create table for plan:
 

@@ -1,7 +1,6 @@
 # Populate students:
 
 # Populate fields of study:
-
 insert into fields (name, type) values ("university core", "core");
 insert into fields (name, school, type) values ("computer science bs", "mcas", "major");
 insert into fields (name, school, type) values ("computer science ba", "mcas", "major");
@@ -106,6 +105,64 @@ insert into class_cats (title) values ("Physics 1 with Lab");
 insert into class_cats (title) values ("Physics 2 with Lab");
 insert into class_cats (title) values ("Additional Quantitative Courses");
 
-
- 
 # Populate reqs:
+
+# Populate courses:
+
+# Populate fulfills:
+
+# Populate enrollment:
+
+# Populate slots:
+insert into slots (semester, year, course_num) values ("fall", 1, 1);
+insert into slots (semester, year, course_num) values ("fall", 1, 2);
+insert into slots (semester, year, course_num) values ("fall", 1, 3);
+insert into slots (semester, year, course_num) values ("fall", 1, 4);
+insert into slots (semester, year, course_num) values ("fall", 1, 5);
+insert into slots (semester, year, course_num) values ("fall", 1, 6);
+insert into slots (semester, year, course_num) values ("spring", 1, 1);
+insert into slots (semester, year, course_num) values ("spring", 1, 2);
+insert into slots (semester, year, course_num) values ("spring", 1, 3);
+insert into slots (semester, year, course_num) values ("spring", 1, 4);
+insert into slots (semester, year, course_num) values ("spring", 1, 5);
+insert into slots (semester, year, course_num) values ("spring", 1, 6);
+insert into slots (semester, year, course_num) values ("fall", 2, 1);
+insert into slots (semester, year, course_num) values ("fall", 2, 2);
+insert into slots (semester, year, course_num) values ("fall", 2, 3);
+insert into slots (semester, year, course_num) values ("fall", 2, 4);
+insert into slots (semester, year, course_num) values ("fall", 2, 5);
+insert into slots (semester, year, course_num) values ("fall", 2, 6);
+insert into slots (semester, year, course_num) values ("spring", 2, 1);
+insert into slots (semester, year, course_num) values ("spring", 2, 2);
+insert into slots (semester, year, course_num) values ("spring", 2, 3);
+insert into slots (semester, year, course_num) values ("spring", 2, 4);
+insert into slots (semester, year, course_num) values ("spring", 2, 5);
+insert into slots (semester, year, course_num) values ("spring", 2, 6);
+insert into slots (semester, year, course_num) values ("fall", 3, 1);
+insert into slots (semester, year, course_num) values ("fall", 3, 2);
+insert into slots (semester, year, course_num) values ("fall", 3, 3);
+insert into slots (semester, year, course_num) values ("fall", 3, 4);
+insert into slots (semester, year, course_num) values ("fall", 3, 5);
+insert into slots (semester, year, course_num) values ("fall", 3, 6);
+insert into slots (semester, year, course_num) values ("spring", 3, 1);
+insert into slots (semester, year, course_num) values ("spring", 3, 2);
+insert into slots (semester, year, course_num) values ("spring", 3, 3);
+insert into slots (semester, year, course_num) values ("spring", 3, 4);
+insert into slots (semester, year, course_num) values ("spring", 3, 5);
+insert into slots (semester, year, course_num) values ("spring", 3, 6);
+insert into slots (semester, year, course_num) values ("fall", 4, 1);
+insert into slots (semester, year, course_num) values ("fall", 4, 2);
+insert into slots (semester, year, course_num) values ("fall", 4, 3);
+insert into slots (semester, year, course_num) values ("fall", 4, 4);
+insert into slots (semester, year, course_num) values ("fall", 4, 5);
+insert into slots (semester, year, course_num) values ("fall", 4, 6);
+insert into slots (semester, year, course_num) values ("spring", 4, 1);
+insert into slots (semester, year, course_num) values ("spring", 4, 2);
+insert into slots (semester, year, course_num) values ("spring", 4, 3);
+insert into slots (semester, year, course_num) values ("spring", 4, 4);
+insert into slots (semester, year, course_num) values ("spring", 4, 5);
+insert into slots (semester, year, course_num) values ("spring", 4, 6);
+
+# Populate plan:
+
+# Populate admins:
