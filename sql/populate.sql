@@ -237,6 +237,15 @@ insert into class_cats (title) values ("Latin and Greek");
 insert into class_cats (title) values ("Ancient Civilization and Culture");
 insert into class_cats (title) values ("Additional Classics Department Courses");
 
+insert into class_cats (title) values ("The Rhetorical Tradition");
+insert into class_cats (title) values ("Survey of Mass Communication");
+insert into class_cats (title) values ("Public Speaking");
+insert into class_cats (title) values ("Interpersonal Communication");
+insert into class_cats (title) values ("Communication Methods");
+insert into class_cats (title) values ("Theory Courses");
+insert into class_cats (title) values ("Writing-Intensive Seminars");
+insert into class_cats (title) values ("Comm Electives");
+
 
 # Populate reqs:
 
