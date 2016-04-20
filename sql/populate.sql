@@ -233,6 +233,9 @@ insert into class_cats (title) values ("Additional Studio Art Courses");
 insert into class_cats (title) values ("Required Courses for Senior Art Majors");
 insert into class_cats (title) values ("Recommended Art Courses");
 
+insert into class_cats (title) values ("Latin and Greek");
+insert into class_cats (title) values ("Ancient Civilization and Culture");
+insert into class_cats (title) values ("Additional Classics Department Courses");
 
 
 # Populate reqs:
