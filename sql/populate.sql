@@ -57,7 +57,7 @@ insert into fields (name, school, type) values ("computer science bs", "mcas", "
 insert into fields (name, school, type) values ("computer science ba", "mcas", "major");
 insert into fields (name, school, type) values ("computer science", "mcas", "minor");
 insert into fields (name, school, type) values ("biology bs", "mcas", "major");
-insert into fields (name, school, type) values ("biology ba", "mcas", "major"):
+insert into fields (name, school, type) values ("biology ba", "mcas", "major");
 insert into fields (name, school, type) values ("biochemistry bs", "mcas", "major");
 insert into fields (name, school, type) values ("biology", "mcas", "minor");
 insert into fields (name, school, type) values ("chemistry", "mcas", "major");
@@ -310,6 +310,80 @@ insert into class_cats (title) values ("French Electives");
 # Populate fulfills:
 
 # Populate enrollment:
+-- all students enrolled in core
+insert into enroll (student, field, current) values (1, 1, true);
+insert into enroll (student, field, current) values (2, 1, true);
+insert into enroll (student, field, current) values (3, 1, true);
+insert into enroll (student, field, current) values (4, 1, true);
+insert into enroll (student, field, current) values (5, 1, true);
+insert into enroll (student, field, current) values (6, 1, true);
+insert into enroll (student, field, current) values (7, 1, true);
+insert into enroll (student, field, current) values (8, 1, true);
+insert into enroll (student, field, current) values (9, 1, true);
+insert into enroll (student, field, current) values (10, 1, true);
+insert into enroll (student, field, current) values (11, 1, true);
+insert into enroll (student, field, current) values (12, 1, true);
+insert into enroll (student, field, current) values (13, 1, true);
+insert into enroll (student, field, current) values (14, 1, true);
+insert into enroll (student, field, current) values (15, 1, true);
+insert into enroll (student, field, current) values (16, 1, true);
+insert into enroll (student, field, current) values (17, 1, true);
+insert into enroll (student, field, current) values (18, 1, true);
+insert into enroll (student, field, current) values (18, 1, true);
+insert into enroll (student, field, current) values (19, 1, true);
+insert into enroll (student, field, current) values (20, 1, true);
+insert into enroll (student, field, current) values (21, 1, true);
+insert into enroll (student, field, current) values (22, 1, true);
+insert into enroll (student, field, current) values (23, 1, true);
+insert into enroll (student, field, current) values (24, 1, true);
+insert into enroll (student, field, current) values (25, 1, true);
+insert into enroll (student, field, current) values (26, 1, true);
+insert into enroll (student, field, current) values (27, 1, true);
+insert into enroll (student, field, current) values (28, 1, true);
+insert into enroll (student, field, current) values (29, 1, true);
+insert into enroll (student, field, current) values (30, 1, true);
+insert into enroll (student, field, current) values (31, 1, true);
+insert into enroll (student, field, current) values (32, 1, true);
+insert into enroll (student, field, current) values (33, 1, true);
+insert into enroll (student, field, current) values (34, 1, true);
+insert into enroll (student, field, current) values (35, 1, true);
+insert into enroll (student, field, current) values (36, 1, true);
+insert into enroll (student, field, current) values (37, 1, true);
+insert into enroll (student, field, current) values (38, 1, true);
+insert into enroll (student, field, current) values (39, 1, true);
+insert into enroll (student, field, current) values (40, 1, true);
+insert into enroll (student, field, current) values (41, 1, true);
+insert into enroll (student, field, current) values (42, 1, true);
+insert into enroll (student, field, current) values (43, 1, true);
+insert into enroll (student, field, current) values (44, 1, true);
+insert into enroll (student, field, current) values (45, 1, true);
+insert into enroll (student, field, current) values (46, 1, true);
+insert into enroll (student, field, current) values (47, 1, true);
+insert into enroll (student, field, current) values (48, 1, true);
+insert into enroll (student, field, current) values (49, 1, true);
+insert into enroll (student, field, current) values (50, 1, true);
+insert into enroll (student, field, current) values (51, 1, true);
+
+--mcas students get majors/minors
+insert into enroll (student, field, current) values (2, 3, true);
+insert into enroll (student, field, current) values (2, 49, true);
+insert into enroll (student, field, current) values (6, 4, true);
+insert into enroll (student, field, current) values (6, 33, true);
+insert into enroll (student, field, current) values (10, 22, true);
+insert into enroll (student, field, current) values (10, 38, true);
+insert into enroll (student, field, current) values (14, 6, true);
+insert into enroll (student, field, current) values (18, 8, true);
+insert into enroll (student, field, current) values (18, 17, true);
+insert into enroll (student, field, current) values (22, 25, true);
+insert into enroll (student, field, current) values (26, 43, true);
+insert into enroll (student, field, current) values (26, 12, true);
+insert into enroll (student, field, current) values (30, 14, true);
+insert into enroll (student, field, current) values (34, 23, true);
+insert into enroll (student, field, current) values (38, 16, true);
+insert into enroll (student, field, current) values (38, 63, true);
+insert into enroll (student, field, current) values (42, 36, true);
+insert into enroll (student, field, current) values (46, 37, true);
+insert into enroll (student, field, current) values (50, 34, true);
 
 # Populate slots:
 insert into slots (semester, year, course_num) values ("fall", 1, 1);
