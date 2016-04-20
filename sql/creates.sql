@@ -59,11 +59,16 @@ int not null, course_num int not null, primary key (id))  engine = InnoDB;
 
 # Create table for plan:
 
-create table plan (slot int not null, student int not null, req int, type 
-enum('complete', 'AP', 'assigned', 'unassigned') not null, course int, 
+create table plan (slot int not null, student int not null, req int, course int, 
 primary key (slot, student), foreign key (slot)
 references slots(id), foreign key (student) references students(id), foreign key
 (req) references reqs(id), foreign key (course) references courses(id))  engine = InnoDB;
+
+# Create table for APs:
+
+create table aps (id int not null auto_increment, student int not null, req int not null,
+primary key (id), foreign key (student) references students(id), foreign key
+(req) references reqs(id)) engine = InnoDB;
 
 # Create table for admin users:
 

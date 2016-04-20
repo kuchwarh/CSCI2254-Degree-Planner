@@ -1,3 +1,5 @@
+# Mock ups can be found in the Wiki
+
 # View core requirements:
 # actor: student
 
@@ -11,10 +13,15 @@
 # actor: student
 
 	# Assign req to plan:
+	update plan set req = $req, type = 'assigned'
+	where slot = $slot and student = $id;
 	
 	# Assign course to plan:
+	update plan set course = $course
+	where slot = $slot and student = $id;
 	
 	# Mark req as AP:
+	insert into aps (student, req) values ($id, $req);
 	
 # Add core requirements:
 # actor: admin
