@@ -176,6 +176,22 @@ insert into class_cats (title) values ("Eighteenth or Nineteenth-Century Literat
 insert into class_cats (title) values ("Medieval or Early-Modern Literature or Eighteenth or Nineteenth-Century Literature");
 insert into class_cats (title) values ("English Electives");
 
+#7 required CS courses
+insert into class_cats (title) values ("Computer Science I");
+insert into class_cats (title) values ("Computer Science II");
+insert into class_cats (title) values ("Logic and Computation");
+insert into class_cats (title) values ("Randomness and Computation");
+insert into class_cats (title) values ("Computer Systems");
+insert into class_cats (title) values ("Computer Organization and Lab");
+#8th if BS not BA
+insert into class_cats (title) values ("CSCI3372 Computer Architecture and Lab");
+insert into class_cats (title) values ("Algorithms");
+#4 CS electives
+insert into class_cats (title) values ("CS Electives 3000 Level");
+insert into class_cats (title) values ("CS Electives 2000 Level");
+insert into class_cats (title) values ("CS BA Math Component");
+insert into class_cats (title) values ("CS BS Math Component");
+insert into class_cats (title) values ("CS BS Science Component");
 
 
 
