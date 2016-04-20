@@ -13,7 +13,7 @@
 # actor: student
 
 	# Assign req to plan:
-	update plan set req = $req, type = 'assigned'
+	update plan set req = $req
 	where slot = $slot and student = $id;
 	
 	# Assign course to plan:
