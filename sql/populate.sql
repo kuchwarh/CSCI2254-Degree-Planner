@@ -217,6 +217,13 @@ insert into class_cats (title) values ("The Study and Writing of History");
 insert into class_cats (title) values ("Non-Western History");
 insert into class_cats (title) values ("Upper-Division History Electives");
 
+insert into class_cats (title) values ("Introduction to Film Art");
+insert into class_cats (title) values ("American Film History");
+insert into class_cats (title) values ("Production Courses");
+insert into class_cats (title) values ("Film Electives 300");
+insert into class_cats (title) values ("Film Electives 400");
+insert into class_cats (title) values ("Additional Film Electives");
+insert into class_cats (title) values ("Film Senior Project");
 
 
 
