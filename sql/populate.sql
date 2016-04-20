@@ -53,6 +53,7 @@ insert into students (username, password, school) values ('sduncan1d', sha1('tem
 
 # Populate fields of study:
 insert into fields (name, type) values ("university core", "core");
+# mcas majors & minors
 insert into fields (name, school, type) values ("computer science bs", "mcas", "major");
 insert into fields (name, school, type) values ("computer science ba", "mcas", "major");
 insert into fields (name, school, type) values ("computer science", "mcas", "minor");
@@ -309,8 +310,9 @@ insert into class_cats (title) values ("French Electives");
 
 # Populate fulfills:
 
+
 # Populate enrollment:
--- all students enrolled in core
+# all students enrolled in core
 insert into enroll (student, field, current) values (1, 1, true);
 insert into enroll (student, field, current) values (2, 1, true);
 insert into enroll (student, field, current) values (3, 1, true);
@@ -363,8 +365,7 @@ insert into enroll (student, field, current) values (48, 1, true);
 insert into enroll (student, field, current) values (49, 1, true);
 insert into enroll (student, field, current) values (50, 1, true);
 insert into enroll (student, field, current) values (51, 1, true);
-
---mcas students get majors/minors
+# mcas students get majors/minors
 insert into enroll (student, field, current) values (2, 3, true);
 insert into enroll (student, field, current) values (2, 49, true);
 insert into enroll (student, field, current) values (6, 4, true);
@@ -436,7 +437,7 @@ insert into slots (semester, year, course_num) values ("spring", 4, 5);
 insert into slots (semester, year, course_num) values ("spring", 4, 6);
 
 # Populate plan:
--- every student starts with an unassigned plan in each slot
+# every student starts with an unassigned plan in each slot
 insert into plan (slot, student, type) values (1, 1, 'unassigned');
 insert into plan (slot, student, type) values (2, 1, 'unassigned');
 insert into plan (slot, student, type) values (3, 1, 'unassigned');
