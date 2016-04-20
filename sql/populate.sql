@@ -193,7 +193,13 @@ insert into class_cats (title) values ("CS BA Math Component");
 insert into class_cats (title) values ("CS BS Math Component");
 insert into class_cats (title) values ("CS BS Science Component");
 
-
+insert into class_cats (title) values ("Modern History 1");
+insert into class_cats (title) values ("Modern History 2");
+insert into class_cats (title) values ("U.S. History 1");
+insert into class_cats (title) values ("U.S. History 2");
+insert into class_cats (title) values ("The Study and Writing of History");
+insert into class_cats (title) values ("Non-Western History");
+insert into class_cats (title) values ("Upper-Division History Electives");
 
 
 
