@@ -91,6 +91,22 @@ insert into class_cats (title) values ("Genes and Genomes");
 insert into class_cats (title) values ("Organismal and Systems Biology");
 insert into class_cats (title) values ("Advanced Experience");
 insert into class_cats (title) values ("Additional Biology Electives");
+
+insert into class_cats (title) values ("Introduction to Art History 1");
+insert into class_cats (title) values ("Introduction to Art History 2");
+insert into class_cats (title) values ("Art History Workshop");
+insert into class_cats (title) values ("Additional Art History Courses 2000");
+insert into class_cats (title) values ("Additional Art History Courses 3000");
+insert into class_cats (title) values ("Seminar in Art Historical Research 4401");
+insert into class_cats (title) values ("Additional Art History Course 4000");
+#NonWestern Art History Track
+insert into class_cats (title) values ("Islamic Art");
+insert into class_cats (title) values ("East Asian Art");
+insert into class_cats (title) values ("Non-Western Art");
+ 
+ 
+ 
+ 
  
 # Populate reqs:
 
