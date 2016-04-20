@@ -225,6 +225,14 @@ insert into class_cats (title) values ("Film Electives 400");
 insert into class_cats (title) values ("Additional Film Electives");
 insert into class_cats (title) values ("Film Senior Project");
 
+insert into class_cats (title) values ("Issues and Approaches to Studio Art");
+#category for classes including painting, drawing, etc.
+insert into class_cats (title) values ("Basic Art Requirements");
+insert into class_cats (title) values ("Art Since 1945 or Art of the Shelf");
+insert into class_cats (title) values ("Additional Studio Art Courses");
+insert into class_cats (title) values ("Required Courses for Senior Art Majors");
+insert into class_cats (title) values ("Recommended Art Courses");
+
 
 
 # Populate reqs:
