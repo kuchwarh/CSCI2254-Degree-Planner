@@ -166,6 +166,22 @@ insert into class_cats (title) values ("Introductory Physics 2 and Lab");
 insert into class_cats (title) values ("Calculus 2");
 insert into class_cats (title) values ("Advanced Biochemistry Electives");
 
+insert into class_cats (title) values ("First Year Writing Seminar");
+insert into class_cats (title) values ("Literature Core");
+insert into class_cats (title) values ("Studies in Poetry");
+insert into class_cats (title) values ("Studies in Narratives");
+##British or American Literature, Pre 1900
+insert into class_cats (title) values ("Medieval or Early-Modern Literature");
+insert into class_cats (title) values ("Eighteenth or Nineteenth-Century Literature");
+insert into class_cats (title) values ("Medieval or Early-Modern Literature or Eighteenth or Nineteenth-Century Literature");
+insert into class_cats (title) values ("English Electives");
+
+
+
+
+
+
+
 # Populate reqs:
 
 # Populate courses:
