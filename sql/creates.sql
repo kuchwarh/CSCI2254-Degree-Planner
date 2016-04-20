@@ -1,15 +1,16 @@
 # Drop table queries:
 
-drop table students;
-drop table fields;
-drop table class_cats;
-drop table reqs;
-drop table courses;
 drop table fulfills;
 drop table enroll;
 drop table slots;
 drop table plan;
 drop table admins;
+drop table students;
+drop table reqs;
+drop table courses;
+drop table fields;
+drop table class_cats;
+drop table slots;
 
 # Create table for student users:
 
@@ -31,7 +32,7 @@ primary key (id))  engine = InnoDB;
 # Create table for requirements: 
 
 create table reqs (id int not null auto_increment, field int not null, class_cat int not
-null, primary key (id), foreign key (field) references fields(id), foreign key
+null, number int not null, primary key (id), foreign key (field) references fields(id), foreign key
 (class_cat) references class_cats(id))  engine = InnoDB;
 
 # Create table for courses:
@@ -53,8 +54,8 @@ students(id), foreign key (field) references fields(id))  engine = InnoDB;
 
 # Create table for slots:
 
-create table slots (id int not null auto_increment, semester varchar(40) not null, 
-course_num int not null, primary key (id))  engine = InnoDB;
+create table slots (id int not null auto_increment, semester varchar(10) not null, year 
+int not null, course_num int not null, primary key (id))  engine = InnoDB;
 
 # Create table for plan:
 
