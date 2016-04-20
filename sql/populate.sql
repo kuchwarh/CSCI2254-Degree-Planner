@@ -437,4 +437,26 @@ insert into slots (semester, year, course_num) values ("spring", 4, 6);
 
 # Populate plan:
 
+
 # Populate admins:
+insert into admins (username, password) values ('lowriek', sha1('Napoleon'));
+insert into admins (username, password) values ('aromero0', sha1('amet'));
+insert into admins (username, password) values ('amoore1', sha1('mauris'));
+insert into admins (username, password) values ('kharrison2', sha1('sagittis'));
+insert into admins (username, password) values ('chudson3', sha1('tristique'));
+insert into admins (username, password) values ('lbishop4', sha1('habitasse'));
+insert into admins (username, password) values ('jfranklin5', sha1('amet'));
+insert into admins (username, password) values ('lnelson6', sha1('in'));
+insert into admins (username, password) values ('cbradley7', sha1('velit'));
+insert into admins (username, password) values ('kfranklin8', sha1('dis'));
+insert into admins (username, password) values ('rriley9', sha1('eget'));
+insert into admins (username, password) values ('swooda', sha1('tempor'));
+insert into admins (username, password) values ('ahamiltonb', sha1('praesent'));
+insert into admins (username, password) values ('jallenc', sha1('magna'));
+insert into admins (username, password) values ('krobinsond', sha1('in'));
+insert into admins (username, password) values ('apattersone', sha1('enim'));
+insert into admins (username, password) values ('jmillsf', sha1('non'));
+insert into admins (username, password) values ('eduncang', sha1('vestibulum'));
+insert into admins (username, password) values ('lthompsonh', sha1('vestibulum'));
+insert into admins (username, password) values ('jrichardsi', sha1('augue'));
+insert into admins (username, password) values ('ataylorj', sha1('eu'));
