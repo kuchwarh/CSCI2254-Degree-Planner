@@ -141,18 +141,30 @@ insert into courses (name, dept, credits) values ("BIOL2300 Biostatistics", "Bio
 
 =======
 
+insert into class_cats (title) values ("Chemistry 1 with Lab");
+insert into class_cats (title) values ("Chemistry 2 with Lab");
+insert into class_cats (title) values ("Organic Chemistry 1 with Lab");
+insert into class_cats (title) values ("Organic Chemistry 2 with Lab, Biological Chemistry, Biochemistry 1");
+insert into class_cats (title) values ("Calculus 1");
+insert into class_cats (title) values ("Calculus 2 or Biostatistics");
+insert into class_cats (title) values ("Additional Quantitative Courses");
+
+insert into class_cats (title) values ("Ecology and Evolution or Introduction to Physiology");
+insert into class_cats (title) values ("Cell Biology");
+insert into class_cats (title) values ("Genetics and Genomics");
 insert into class_cats (title) values ("General Chemistry 1 with Lab");
 insert into class_cats (title) values ("General Chemistry 2 with Lab");
 insert into class_cats (title) values ("Organic Chemistry 1 with Lab");
 insert into class_cats (title) values ("Organic Chemistry 2 with Lab");
-insert into class_cats (title) values ("Biological Chemistry");
+insert into class_cats (title) values ("Analytical Chemistry and Laboratory");
+insert into class_cats (title) values ("Analytical Chemistry and Laboratory");
+insert into class_cats (title) values ("Physical Chemistry for Biochemistry Majors");
 insert into class_cats (title) values ("Biochemistry 1");
-insert into class_cats (title) values ("Calculus 1");
+insert into class_cats (title) values ("Biochemistry 2, Biological Chemistry, or Molecular Biology");
+insert into class_cats (title) values ("Introductory Physics 1 and Lab");
+insert into class_cats (title) values ("Introductory Physics 2 and Lab");
 insert into class_cats (title) values ("Calculus 2");
-insert into class_cats (title) values ("Biostatistics");
-insert into class_cats (title) values ("Physics 1 with Lab");
-insert into class_cats (title) values ("Physics 2 with Lab");
-insert into class_cats (title) values ("Additional Quantitative Courses");
+insert into class_cats (title) values ("Advanced Biochemistry Electives");
 
 # Populate reqs:
 
