@@ -246,6 +246,11 @@ insert into class_cats (title) values ("Theory Courses");
 insert into class_cats (title) values ("Writing-Intensive Seminars");
 insert into class_cats (title) values ("Comm Electives");
 
+insert into class_cats (title) values ("French 300 Level Courses");
+insert into class_cats (title) values ("French 400 Level Courses");
+insert into class_cats (title) values ("French Electives");
+
+
 
 # Populate reqs:
 
