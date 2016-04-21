@@ -102,11 +102,7 @@ insert into class_cats (title) values ("Additional Biology Electives");
 
 # Populate courses:
 
--- # Create table for courses:
--- 
--- create table courses (id int not null auto_increment, name varchar(30) not null,
--- dept varchar(30) not null, credits int, primary key (id)) engine = InnoDB;
-
+---biology bs/ba/minor/major---
 insert into courses (name, dept, credits) values ("BIOL2010 Ecology & Evolution", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL2000 Molecules & Cells", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL2040 Investigations in Molecular Cell Biology Lab", "Biol", "3");
@@ -195,6 +191,25 @@ insert into courses (name, dept, credits) values ("PSYC2285	Behavioral Neuroscie
 insert into courses (name, dept, credits) values ("PSYC3329	Psychophysiology of Stress", "Psyc", "3");
 insert into courses (name, dept, credits) values ("PSYC3380	Neuroscience of Psychopathology", "Psyc", "3");
 insert into courses (name, dept, credits) values ("PSYC3383	Neurobiological Basis of Learning & Memory ", "Psyc", "3");
+
+---university core courses---
+insert into courses (name, dept, credits) values ("ARTH1101	Art from Prehistoric Times to the High Midle Ages", "Arth", "3");
+insert into courses (name, dept, credits) values ("ARTH1107	History of Architecture", "Arth", "3");
+insert into courses (name, dept, credits) values ("ARTH1109	Clues to Seeing", "Arth", "3");
+insert into courses (name, dept, credits) values ("ARTH2221	Mysteries and Visions: Early Medieval Art", "Arth", "3");
+insert into courses (name, dept, credits) values ("ARTH2258	Twentieth Century Art", "Arth", "3");
+insert into courses (name, dept, credits) values ("ARTH2267	Salt Box to Skyscraper: American Architecture 17th-20th Century", "Arth", "3");
+insert into courses (name, dept, credits) values ("ARTS1101	Drawing I: Foundations", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTS1102	Painting I: Foundations", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTS1104	Seeing is Believing", "Arts", "3");
+insert into courses (name, dept, credits) values ("FILM2283	History of European Cinema", "Film", "3");
+insert into courses (name, dept, credits) values ("MUSA1100	Fundamentals of Music Theory I", "Musa", "3");
+insert into courses (name, dept, credits) values ("MUSA1200	Introduction to Music", "Musa", "3");
+insert into courses (name, dept, credits) values ("MUSA1300	History of Popular Music", "Musa", "3");
+insert into courses (name, dept, credits) values ("THTR1120	Elements of Dance", "Thtr", "3");
+insert into courses (name, dept, credits) values ("THTR1170	Introduction to Theatre", "Thtr", "3");
+insert into courses (name, dept, credits) values ("THTR1172	Dramatic Structure and Theatrical Process", "Thtr", "3");
+insert into courses (name, dept, credits) values ("UNAS1104	Modernism and the Arts I", "Unas", "3");
 
 =======
 
