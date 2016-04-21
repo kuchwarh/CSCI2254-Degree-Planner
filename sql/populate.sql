@@ -224,6 +224,29 @@ insert into courses (name, dept, credits) values ("THTR1701	Devising Theatre: Il
 insert into courses (name, dept, credits) values ("UNAS1107	Modernism and the Arts II", "Unas", "3");
 
 ---cultural diversity---
+insert into courses(name, dept, credits) values ("AADS1104	African American History I", "Aads", "3");
+insert into courses(name, dept, credits) values ("AADS1110	Introduction to African Diaspora Studies", "Aads", "3");
+insert into courses(name, dept, credits) values ("AADS1120	Religion in Africa", "Aads", "3");
+insert into courses(name, dept, credits) values ("AADS2248	Advanced Community Service Research Seminar I", "Aads", "3");
+insert into courses(name, dept, credits) values ("AADS2253	The Modern Black Freedom Movement", "Aads", "3");
+insert into courses(name, dept, credits) values ("AADS5597	Contemporary Race Theory", "Aads", "3");
+insert into courses(name, dept, credits) values ("APSY1030	Child Growth and Development", "Apsy", "3");
+insert into courses(name, dept, credits) values ("ARTH2203	Great Cities of Islam", "Arth", "3");
+insert into courses(name, dept, credits) values ("ARTH4214	Art of the Silk Road", "Arth", "3");
+insert into courses(name, dept, credits) values ("COMM2285	Cultural Diversity in the Media", "Comm", "3");
+insert into courses(name, dept, credits) values ("ECON3374	Development Economics and Policy", "Econ", "3");
+insert into courses(name, dept, credits) values ("ENGL2122	Language in Society", "Engl", "3");
+insert into courses(name, dept, credits) values ("ENGL2229	Literature of the Other Europe", "Engl", "3");
+insert into courses(name, dept, credits) values ("ENGL2246	Introduction to Asian American Literature", "Engl", "3");
+insert into courses(name, dept, credits) values ("ENGL2255	Introduction to Postcolonial Literature", "Engl", "3");
+insert into courses(name, dept, credits) values ("ENGL4495	Contemporary Asian Cinema", "Engl", "3");
+insert into courses(name, dept, credits) values ("ENGL4637	Capstone:Vision Quest:A Multicultural Approach", "Engl", "3");
+insert into courses(name, dept, credits) values ("FILM3314	Cinema of the Greater Middle East", "Film", "3");
+insert into courses(name, dept, credits) values ("FILM4495	Contemporary Asian Cinema", "Film", "3");
+insert into courses(name, dept, credits) values ("FREN3300	The French and the Peoples of America", "Fren", "3");
+insert into courses(name, dept, credits) values ("HIST1005	Asia in the World I", "Hist", "3");
+---ended at asia in the world I on fall2015 cultural diversity courses---
+
 
 
 =======
