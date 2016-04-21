@@ -37,7 +37,7 @@ null, number int not null, primary key (id), foreign key (field) references fiel
 
 # Create table for courses:
 
-create table courses (id int not null auto_increment, name varchar(30) not null,
+create table courses (id int not null auto_increment, name varchar(100) not null,
 dept varchar(30) not null, credits int, primary key (id)) engine = InnoDB;
 
 # Create table for fulfills:

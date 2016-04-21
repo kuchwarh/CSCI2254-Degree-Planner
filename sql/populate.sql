@@ -327,6 +327,7 @@ insert into courses (name, dept, credits) values ("BIOL4320 Developmental Biolog
 insert into courses (name, dept, credits) values ("BIOL4590 Introduction to Neuroscience", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4330 Human Physiology with Lab", "Biol", "4");
 insert into courses (name, dept, credits) values ("BIOL4350 Biological Chemistry", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4170 Microbial Genetics", "Biol", "3");
 
 
 ---committed---
@@ -347,11 +348,84 @@ insert into courses (name, dept, credits) values ("PHYS2100 Physics 1 with Lab",
 insert into courses (name, dept, credits) values ("PHYS2101 Physics 2 with Lab", "Phys", "4");
 insert into courses (name, dept, credits) values ("BIOL2300 Biostatistics", "Biol", "3");
 ---committed still need to do statistics---
+--- inserted up to here
 
 =======
 
 # Populate fulfills:
+# bio bs reqs
+insert into fulfills (req_id, course_id) values (45, 13);
+insert into fulfills (req_id, course_id) values (46, 12);
+insert into fulfills (req_id, course_id) values (47, 14);
+insert into fulfills (req_id, course_id) values (48, 15);
+insert into fulfills (req_id, course_id) values (48, 16);
+insert into fulfills (req_id, course_id) values (48, 37);
+insert into fulfills (req_id, course_id) values (49, 17);
+insert into fulfills (req_id, course_id) values (49, 18);
+insert into fulfills (req_id, course_id) values (49, 19);
+insert into fulfills (req_id, course_id) values (49, 21);
+insert into fulfills (req_id, course_id) values (49, 20);
+--insert into fulfills (req_id, course_id) values (50, );
+	--advanced exp courses for bio still needed
+--insert into fulfills (req_id, course_id) values (51, );
+	--bio elects courses still needed
+insert into fulfills (req_id, course_id) values (52, 23);
+insert into fulfills (req_id, course_id) values (52, 24);
+insert into fulfills (req_id, course_id) values (53, 25);
+insert into fulfills (req_id, course_id) values (53, 26);
+insert into fulfills (req_id, course_id) values (54, 27);
+insert into fulfills (req_id, course_id) values (54, 28);
+insert into fulfills (req_id, course_id) values (55, 29);
+insert into fulfills (req_id, course_id) values (55, 30);
+insert into fulfills (req_id, course_id) values (55, 22);
+insert into fulfills (req_id, course_id) values (55, 31);
+insert into fulfills (req_id, course_id) values (56, 32);
+insert into fulfills (req_id, course_id) values (57, 33);
+insert into fulfills (req_id, course_id) values (57, 36);
+insert into fulfills (req_id, course_id) values (58, 34);
+insert into fulfills (req_id, course_id) values (58, 35);
+insert into fulfills (req_id, course_id) values (58, 36);
+--insert into fulfills (req_id, course_id) values (58, );
+	--biomolecules biol520
+--insert into fulfills (req_id, course_id) values (58, );
+	--compsci 1
+--insert into fulfills (req_id, course_id) values (58, );
+	--compsci 2
+insert into fulfills (req_id, course_id) values (58, 33);
+--insert into fulfills (req_id, course_id) values (58, );
+	--math 2000 level courses
 
+# bio ba reqs
+insert into fulfills (req_id, course_id) values (59, 13);
+insert into fulfills (req_id, course_id) values (60, 12);
+insert into fulfills (req_id, course_id) values (61, 14);
+insert into fulfills (req_id, course_id) values (62, 15);
+insert into fulfills (req_id, course_id) values (62, 16);
+insert into fulfills (req_id, course_id) values (62, 37);
+insert into fulfills (req_id, course_id) values (63, 17);
+insert into fulfills (req_id, course_id) values (63, 18);
+insert into fulfills (req_id, course_id) values (63, 19);
+insert into fulfills (req_id, course_id) values (63, 21);
+insert into fulfills (req_id, course_id) values (63, 20);
+--insert into fulfills (req_id, course_id) values (64, );
+	--advanced exp courses for bio still needed
+--insert into fulfills (req_id, course_id) values (65, );
+	--bio elects courses still needed
+insert into fulfills (req_id, course_id) values (66, 23);
+insert into fulfills (req_id, course_id) values (66, 24);	
+insert into fulfills (req_id, course_id) values (67, 25);
+insert into fulfills (req_id, course_id) values (67, 26);
+insert into fulfills (req_id, course_id) values (68, 32);
+
+# bio minor reqs
+insert into fulfills (req_id, course_id) values (69, 13);
+insert into fulfills (req_id, course_id) values (70, 12);
+--insert into fulfills (req_id, course_id) values (71, );
+	--bio elects courses still needed
+
+# biochem major reqs
+
+	
 
 # Populate enrollment:
 # all students enrolled in core
