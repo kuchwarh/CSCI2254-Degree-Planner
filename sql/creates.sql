@@ -26,7 +26,7 @@ school enum('mcas', 'csom', 'cson', 'lsoe'), type enum('major', 'minor',
 
 # Create table for class categories:
 
-create table class_cats (id int not null auto_increment, title varchar(30) not null, 
+create table class_cats (id int not null auto_increment, title varchar(100) not null, 
 primary key (id))  engine = InnoDB;
 
 # Create table for requirements: 
@@ -37,7 +37,7 @@ null, number int not null, primary key (id), foreign key (field) references fiel
 
 # Create table for courses:
 
-create table courses (id int not null auto_increment, name varchar(30) not null,
+create table courses (id int not null auto_increment, name varchar(100) not null,
 dept varchar(30) not null, credits int, primary key (id)) engine = InnoDB;
 
 # Create table for fulfills:
@@ -59,11 +59,16 @@ int not null, course_num int not null, primary key (id))  engine = InnoDB;
 
 # Create table for plan:
 
-create table plan (slot int not null, student int not null, req int not null, type 
-enum('complete', 'AP', 'assigned', 'unassigned') not null, class_name varchar(100), 
-professor varchar(30), credits int, primary key (slot, student), foreign key (slot)
+create table plan (slot int not null, student int not null, req int, course int, 
+primary key (slot, student), foreign key (slot)
 references slots(id), foreign key (student) references students(id), foreign key
-(req) references reqs(id))  engine = InnoDB;
+(req) references reqs(id), foreign key (course) references courses(id))  engine = InnoDB;
+
+# Create table for APs:
+
+create table aps (id int not null auto_increment, student int not null, req int not null,
+primary key (id), foreign key (student) references students(id), foreign key
+(req) references reqs(id)) engine = InnoDB;
 
 # Create table for admin users:
 
