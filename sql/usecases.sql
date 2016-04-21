@@ -2,10 +2,21 @@
 
 # View core requirements:
 # actor: student
+select reqs.class_cat
+from reqs
+inner join fields
+on reqs.field = fields.id
+where field.type = 'core'
+ and school is null;
 
 
 # View major requirements:
 # actor: student
+select reqs.class_cat
+from reqs
+inner join fields
+on reqs.field = fields.id
+where fields.id = $field;
 
 
 # Update field of study:
@@ -185,6 +196,9 @@ insert into reqs (field, class_cat, number) values (1,
 
 # Add major requirements:
 # actor: admin
+insert in class_cats (title) values ($title);
+insert into reqs (field, class_cat, number) values ($field,
+(select id from class_cats where title = $title), $number);
 
 
 # View student schedule:
