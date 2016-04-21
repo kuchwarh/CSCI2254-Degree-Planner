@@ -193,6 +193,8 @@ insert into courses (name, dept, credits) values ("PSYC3380	Neuroscience of Psyc
 insert into courses (name, dept, credits) values ("PSYC3383	Neurobiological Basis of Learning & Memory ", "Psyc", "3");
 
 ---university core courses---
+
+---fine arts---
 insert into courses (name, dept, credits) values ("ARTH1101	Art from Prehistoric Times to the High Midle Ages", "Arth", "3");
 insert into courses (name, dept, credits) values ("ARTH1107	History of Architecture", "Arth", "3");
 insert into courses (name, dept, credits) values ("ARTH1109	Clues to Seeing", "Arth", "3");
@@ -210,6 +212,19 @@ insert into courses (name, dept, credits) values ("THTR1120	Elements of Dance", 
 insert into courses (name, dept, credits) values ("THTR1170	Introduction to Theatre", "Thtr", "3");
 insert into courses (name, dept, credits) values ("THTR1172	Dramatic Structure and Theatrical Process", "Thtr", "3");
 insert into courses (name, dept, credits) values ("UNAS1104	Modernism and the Arts I", "Unas", "3");
+insert into courses (name, dept, credits) values ("ARTH1102	Art: Renaissance to Modern", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTH2206	Art and Myth in Ancient Greece", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTH2222	Imagination and Imagery: Later Medieval Art", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTH2251	Modern Architecture", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTH2257	Nineteenth Century Art", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTH2280	Masterpieces of Islamic Art", "Arts", "3");
+insert into courses (name, dept, credits) values ("ARTS1150	Painting Plus: Collage", "Arts", "3");
+insert into courses (name, dept, credits) values ("CLAS2208	Art and Myth in Ancient Greece", "Clas", "3");
+insert into courses (name, dept, credits) values ("THTR1701	Devising Theatre: Illness as Metaphor", "Thtr", "3");
+insert into courses (name, dept, credits) values ("UNAS1107	Modernism and the Arts II", "Unas", "3");
+
+---cultural diversity---
+
 
 =======
 
