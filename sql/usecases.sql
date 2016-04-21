@@ -8,8 +8,72 @@
 # actor: student
 
 
-# Add field of study:
+# Update field of study:
 # actor: student
+
+	# Populate previous major 1:
+	select field
+	from enroll
+	where student = $id
+	 and type = 'major'
+	 and current = true
+	limit 1;
+	
+	# Populate previous major 2:
+	select field
+	from enroll
+	where student = $id
+	 and type = 'major'
+	 and current = true
+	limit 1, 1;
+	
+	# Populate previous minor 1:
+	select field
+	from enroll
+	where student = $id
+	 and type = 'minor'
+	 and current = true
+	limit 1;
+	
+	# Populate previous minor 2:
+	select field
+	from enroll
+	where student = $id
+	 and type = 'minor'
+	 and current = true
+	limit 1, 1;
+	
+	# Change existing major 1:
+	update enroll set current = false
+	where student = $id
+	 and field = $oldMajor1;
+	 
+	# Change existing major 2:
+	update enroll set current = false
+	where student = $id
+	 and field = $oldMajor2;
+	 
+	# Change existing minor 1:
+	update enroll set current = false
+	where student = $id
+	 and field = $oldMinor1;
+	 
+	# Change existing minor 2:
+	update enroll set current = false
+	where student = $id
+	 and field = $oldMinor2;
+	 
+	# Add new major 1:
+	insert into enroll (student, field, current) values ($id, $major1, true);
+	
+	# Add new major 2:
+	insert into enroll (student, field, current) values ($id, $major2, true);
+	
+	# Add new minor 1:
+	insert into enroll (student, field, current) values ($id, $minor1, true);
+	
+	# Add new minor 2:
+	insert into enroll (student, field, current) values ($id, $minor2, true);
 
 
 # Schedule courses:
