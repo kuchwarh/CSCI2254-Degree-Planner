@@ -135,6 +135,7 @@ insert into fields (name, school, type) values ("medical humanities", "mcas", "m
 insert into fields (name, school, type) values ("psychoanalytic", "mcas", "minor");
 insert into fields (name, school, type) values ("womens studies", "mcas", "minor");
 
+
 # Populate class_cats:
 insert into class_cats (title) values ("Molecules & Cells");
 insert into class_cats (title) values ("Ecology & Evolution");
@@ -156,59 +157,6 @@ insert into class_cats (title) values ("Islamic Art");
 insert into class_cats (title) values ("East Asian Art");
 insert into class_cats (title) values ("Non-Western Art");
  
- 
- 
- 
- 
-# Populate reqs:
-
-
-
-
-
-
-
-# Populate courses:
-
--- # Create table for courses:
--- 
--- create table courses (id int not null auto_increment, name varchar(30) not null,
--- dept varchar(30) not null, credits int, primary key (id)) engine = InnoDB;
-
-insert into courses (name, dept, credits) values ("BIOL2010 Ecology & Evolution", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL2000 Molecules & Cells", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL2040 Investigations in Molecular Cell Biology Lab", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL3150 Introduction to Genomics", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL3190 Genetics & Genomics", "Biol", "4");
-insert into courses (name, dept, credits) values ("BIOL3030 Introduction to Physiology", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL3210 Plant Biology", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL4320 Developmental Biology", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL4590 Introduction to Neuroscience", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL4330 Human Physiology with Lab", "Biol", "4");
-insert into courses (name, dept, credits) values ("BIOL4350 Biological Chemistry", "Biol", "3");
-
-
----committed---
-insert into courses (name, dept, credits) values ("CHEM1109 General Chemistry 1", "Chem", "3");
-insert into courses (name, dept, credits) values ("CHEM1110 General Chemistry Lab 1", "Chem", "1");
-insert into courses (name, dept, credits) values ("CHEM1111 General Chemistry 2", "Chem", "3");
-insert into courses (name, dept, credits) values ("CHEM1112 General Chemistry Lab 2", "Chem", "1");
-insert into courses (name, dept, credits) values ("CHEM2231 Organic Chemistry 1", "Chem", "3");
-insert into courses (name, dept, credits) values ("CHEM2232 Organic Chemistry Lab 1", "Chem", "1");
-insert into courses (name, dept, credits) values ("CHEM2233 Organic Chemistry 2", "Chem", "3");
-insert into courses (name, dept, credits) values ("CHEM2234 Organic Chemistry 2 Lab", "Chem", "1");
-insert into courses (name, dept, credits) values ("CHEM4461 Biochemistry 1", "Chem", "3");
-
----committed---
-insert into courses (name, dept, credits) values ("MATH1100 Calculus 1", "Math", "4");
-insert into courses (name, dept, credits) values ("MATH1101 Calculus 2", "Math", "4");
-insert into courses (name, dept, credits) values ("PHYS2100 Physics 1 with Lab", "Phys", "4");
-insert into courses (name, dept, credits) values ("PHYS2101 Physics 2 with Lab", "Phys", "4");
-insert into courses (name, dept, credits) values ("BIOL2300 Biostatistics", "Biol", "3");
----committed still need to do statistics---
-
-=======
-
 insert into class_cats (title) values ("Chemistry 1 with Lab");
 insert into class_cats (title) values ("Chemistry 2 with Lab");
 insert into class_cats (title) values ("Organic Chemistry 1 with Lab");
@@ -307,11 +255,100 @@ insert into class_cats (title) values ("GE 220 EARTH MATERIALS");
 insert into class_cats (title) values ("Envrionmental Science Elective Courses");
 insert into class_cats (title) values ("Senior Research Experience");
 insert into class_cats (title) values ("Co-Requisite Courses in Natural Sciences and Mathematics");
-
-
+-- inserted up to here
+ 
+ 
 # Populate reqs:
+# bio bs 6
+insert into reqs (field, class_cat, number) values (6, 15, 1);
+insert into reqs (field, class_cat, number) values (6, 16, 1);
+insert into reqs (field, class_cat, number) values (6, 17, 1);
+insert into reqs (field, class_cat, number) values (6, 18, 1);
+insert into reqs (field, class_cat, number) values (6, 19, 1);
+insert into reqs (field, class_cat, number) values (6, 20, 1);
+insert into reqs (field, class_cat, number) values (6, 21, 4);
+insert into reqs (field, class_cat, number) values (6, 32, 1);
+insert into reqs (field, class_cat, number) values (6, 33, 1);
+insert into reqs (field, class_cat, number) values (6, 34, 1);
+insert into reqs (field, class_cat, number) values (6, 35, 1);
+insert into reqs (field, class_cat, number) values (6, 36, 1);
+insert into reqs (field, class_cat, number) values (6, 37, 1);
+insert into reqs (field, class_cat, number) values (6, 38, 2);
+# bio ba 81
+insert into reqs (field, class_cat, number) values (81, 15, 1);
+insert into reqs (field, class_cat, number) values (81, 16, 1);
+insert into reqs (field, class_cat, number) values (81, 17, 1);
+insert into reqs (field, class_cat, number) values (81, 18, 1);
+insert into reqs (field, class_cat, number) values (81, 19, 1);
+insert into reqs (field, class_cat, number) values (81, 20, 1);
+insert into reqs (field, class_cat, number) values (81, 21, 5);
+insert into reqs (field, class_cat, number) values (6, 32, 1);
+insert into reqs (field, class_cat, number) values (6, 33, 1);
+insert into reqs (field, class_cat, number) values (6, 36, 1);
+# bio minor 7
+insert into reqs (field, class_cat, number) values (7, 15, 1);
+insert into reqs (field, class_cat, number) values (7, 16, 1);
+insert into reqs (field, class_cat, number) values (7, 21, 4);
+# biochem major 82
+insert into reqs (field, class_cat, number) values (82, 15, 1);
+insert into reqs (field, class_cat, number) values (82, 39, 1);
+insert into reqs (field, class_cat, number) values (82, 40, 1);
+insert into reqs (field, class_cat, number) values (82, 41, 1);
+insert into reqs (field, class_cat, number) values (82, 17, 1);
+insert into reqs (field, class_cat, number) values (82, 42, 1);
+insert into reqs (field, class_cat, number) values (82, 43, 1);
+insert into reqs (field, class_cat, number) values (82, 44, 1);
+insert into reqs (field, class_cat, number) values (82, 45, 1);
+insert into reqs (field, class_cat, number) values (82, 46, 1);
+insert into reqs (field, class_cat, number) values (82, 48, 1);
+insert into reqs (field, class_cat, number) values (82, 49, 1);
+insert into reqs (field, class_cat, number) values (82, 50, 1);
+insert into reqs (field, class_cat, number) values (82, 53, 1);
+insert into reqs (field, class_cat, number) values (82, 51, 1);
+insert into reqs (field, class_cat, number) values (82, 52, 1);
+insert into reqs (field, class_cat, number) values (82, 54, 2);
+
 
 # Populate courses:
+
+-- # Create table for courses:
+-- 
+-- create table courses (id int not null auto_increment, name varchar(30) not null,
+-- dept varchar(30) not null, credits int, primary key (id)) engine = InnoDB;
+
+insert into courses (name, dept, credits) values ("BIOL2010 Ecology & Evolution", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL2000 Molecules & Cells", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL2040 Investigations in Molecular Cell Biology Lab", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL3150 Introduction to Genomics", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL3190 Genetics & Genomics", "Biol", "4");
+insert into courses (name, dept, credits) values ("BIOL3030 Introduction to Physiology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL3210 Plant Biology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4320 Developmental Biology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4590 Introduction to Neuroscience", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4330 Human Physiology with Lab", "Biol", "4");
+insert into courses (name, dept, credits) values ("BIOL4350 Biological Chemistry", "Biol", "3");
+
+
+---committed---
+insert into courses (name, dept, credits) values ("CHEM1109 General Chemistry 1", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM1110 General Chemistry Lab 1", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM1111 General Chemistry 2", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM1112 General Chemistry Lab 2", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM2231 Organic Chemistry 1", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM2232 Organic Chemistry Lab 1", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM2233 Organic Chemistry 2", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM2234 Organic Chemistry 2 Lab", "Chem", "1");
+insert into courses (name, dept, credits) values ("CHEM4461 Biochemistry 1", "Chem", "3");
+
+---committed---
+insert into courses (name, dept, credits) values ("MATH1100 Calculus 1", "Math", "4");
+insert into courses (name, dept, credits) values ("MATH1101 Calculus 2", "Math", "4");
+insert into courses (name, dept, credits) values ("PHYS2100 Physics 1 with Lab", "Phys", "4");
+insert into courses (name, dept, credits) values ("PHYS2101 Physics 2 with Lab", "Phys", "4");
+insert into courses (name, dept, credits) values ("BIOL2300 Biostatistics", "Biol", "3");
+---committed still need to do statistics---
+
+=======
 
 # Populate fulfills:
 

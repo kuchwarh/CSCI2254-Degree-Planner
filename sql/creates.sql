@@ -26,7 +26,7 @@ school enum('mcas', 'csom', 'cson', 'lsoe'), type enum('major', 'minor',
 
 # Create table for class categories:
 
-create table class_cats (id int not null auto_increment, title varchar(30) not null, 
+create table class_cats (id int not null auto_increment, title varchar(100) not null, 
 primary key (id))  engine = InnoDB;
 
 # Create table for requirements: 
