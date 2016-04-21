@@ -118,9 +118,55 @@ insert into courses (name, dept, credits) values ("BIOL4320 Developmental Biolog
 insert into courses (name, dept, credits) values ("BIOL4590 Introduction to Neuroscience", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4330 Human Physiology with Lab", "Biol", "4");
 insert into courses (name, dept, credits) values ("BIOL4350 Biological Chemistry", "Biol", "3");
-
-
----committed---
+insert into courses (name, dept, credits) values ("BIOL5290 Biomolecules: Molecular Driving Forces BIOL 5290", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL1100	General Biology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL1420	The Genetic Century", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL1440	Sustaining the Biosphere", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL3040 Cell Biology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL3150 Introduction to Genomics", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL3190	Genetics & Genomics", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4200 Introduction to Bioinformatics", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4570	Principles of Immunology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4830	Research in Molecular Biology Lab", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5330 Virus Infections and Cellular Transport", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5420	Cancer as a Metabolic Disease", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5370	Literature for Neurological Diseases", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5380	Topics in Biomechanics", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5450	Advanced Lab in Cell Imaging", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5570	Antibiotics and Antibiotic Resistance", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5700	Biology of the Nucleus", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4140 Microbiology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4170 Microbial Genetics", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4260 Human Anatomy with Lab", "Biol", "4");
+insert into courses (name, dept, credits) values ("BIOL4400	Molecular Biology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4510	Cancer Biology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5060	Recombinant DNA Technology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4280 Modeling Physiology Using Physical Computing", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4870	Research in Molecular Genetics Lab", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4880	Research in Biomechanics Lab ", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4890	Investigations in Cellular Re-Programming", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5130	Environmental Disruptors of Development", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5230	Immunity and Infectious Disease", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5370	Literature for Neurological Diseases", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5420	Cancer as a Metabolic Disease", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5540	Synthetic Biology", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5460	Topics in Microbial Pathogens", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5450	Advanced Lab in Cell Imaging", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL5630	DNA Viruses and Cancer", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4911 Undergraduate Research I", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4917	Advanced Undergraduate Research I ", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4955 Biology Honors Research Thesis I", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4954	Undergraduate Research Investigations", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4941	Senior Thesis Seminar I", "Biol", "1");
+insert into courses (name, dept, credits) values ("BIOL4951	Senior Thesis Research I", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4921	Advanced Independent Research", "Biol", "6");
+insert into courses (name, dept, credits) values ("BIOL4912 Undergraduate Research II", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4918	Advanced Undergraduate Research II", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4953	Biology Honors Research Thesis II", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4914	Undergraduate Research Investigations II", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4942	Senior Thesis Seminar II", "Biol", "1");
+insert into courses (name, dept, credits) values ("BIOL4952	Senior Thesis Research II", "Biol", "3");
+insert into courses (name, dept, credits) values ("BIOL4921	Advanced Independent Research", "Biol", "6");
 insert into courses (name, dept, credits) values ("CHEM1109 General Chemistry 1", "Chem", "3");
 insert into courses (name, dept, credits) values ("CHEM1110 General Chemistry Lab 1", "Chem", "1");
 insert into courses (name, dept, credits) values ("CHEM1111 General Chemistry 2", "Chem", "3");
@@ -130,14 +176,25 @@ insert into courses (name, dept, credits) values ("CHEM2232 Organic Chemistry La
 insert into courses (name, dept, credits) values ("CHEM2233 Organic Chemistry 2", "Chem", "3");
 insert into courses (name, dept, credits) values ("CHEM2234 Organic Chemistry 2 Lab", "Chem", "1");
 insert into courses (name, dept, credits) values ("CHEM4461 Biochemistry 1", "Chem", "3");
-
----committed---
+insert into courses (name, dept, credits) values ("CHEM4462	Biochemistry 2", "Chem", "3");
+insert into courses (name, dept, credits) values ("CHEM5582	Advanced Topics in Biochemistry", "Chem", "3");
 insert into courses (name, dept, credits) values ("MATH1100 Calculus 1", "Math", "4");
 insert into courses (name, dept, credits) values ("MATH1101 Calculus 2", "Math", "4");
 insert into courses (name, dept, credits) values ("PHYS2100 Physics 1 with Lab", "Phys", "4");
 insert into courses (name, dept, credits) values ("PHYS2101 Physics 2 with Lab", "Phys", "4");
 insert into courses (name, dept, credits) values ("BIOL2300 Biostatistics", "Biol", "3");
----committed still need to do statistics---
+insert into courses (name, dept, credits) values ("ECON1151 Statistics", "Econ", "3");
+insert into courses (name, dept, credits) values ("MATH3353 Statistics", "Math", "3"); 
+insert into courses (name, dept, credits) values ("CSCI1101 Computer Science 1", "Csci", "3");
+insert into courses (name, dept, credits) values ("CSCI1102 Computer Science 2", "Csci", "3");
+insert into courses (name, dept, credits) values ("PHIL5593	Philosophy of Science", "Phil", "3");
+insert into courses (name, dept, credits) values ("PSYC2285	Behavioral Neuroscience", "Psyc", "3");
+insert into courses (name, dept, credits) values ("THEO3598	Law, Medicine & Ethics", "Theo", "3");
+insert into courses (name, dept, credits) values ("THEO5498	HIV, AIDS & Ethics", "Theo", "3");
+insert into courses (name, dept, credits) values ("PSYC2285	Behavioral Neuroscience", "Psyc", "3");
+insert into courses (name, dept, credits) values ("PSYC3329	Psychophysiology of Stress", "Psyc", "3");
+insert into courses (name, dept, credits) values ("PSYC3380	Neuroscience of Psychopathology", "Psyc", "3");
+insert into courses (name, dept, credits) values ("PSYC3383	Neurobiological Basis of Learning & Memory ", "Psyc", "3");
 
 =======
 
