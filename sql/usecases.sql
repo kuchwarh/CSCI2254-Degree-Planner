@@ -15,7 +15,7 @@
 # Schedule courses:
 # actor: student
 
-	# Populate unassigned requirements:
+	# Populate unassigned requirements (for side bar and drop down menus):
 	select r.class_cat 
 	from reqs as r, enroll as e
     where e.student = $id
@@ -23,12 +23,27 @@
      				  from plan
      				  where student = e.student);
 
+	# Populate classes that fulfill selected requirement:
+	select name 
+	from courses
+	where id in (select course_id
+				 from fulfills
+				 where req_id = $req);
+
 	# Populate requirements with AP credits:
 	select r.class_cat 
 	from reqs as r
 	inner join aps as a
 	 on r.id = a.req
 	 where a.student = $id;
+	
+	# Populate previous selection in each slot:
+	select class_cat 
+	from reqs
+	where id in (select req
+				 from plan
+				 where slot = $slot
+				  and student = $id);
 	
 	# Mark req as AP:
 	insert into aps (student, req) values ($id, $req);
@@ -96,8 +111,12 @@ insert into plan (slot, student) values (46, $id);
 insert into plan (slot, student) values (47, $id);
 insert into plan (slot, student) values (48, $id);	
 	
+	
 # Add core requirements:
 # actor: admin
+insert into class_cats (title) values ($title);
+insert into reqs (field, class_cat, number) values (1, 
+(select id from class_cats where title = $title), $number);
 
 
 # Add major requirements:
