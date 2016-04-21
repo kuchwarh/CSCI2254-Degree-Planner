@@ -342,7 +342,6 @@ insert into courses (name, dept, credits) values ("BIOL5450	Advanced Lab in Cell
 insert into courses (name, dept, credits) values ("BIOL5570	Antibiotics and Antibiotic Resistance", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL5700	Biology of the Nucleus", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4140 Microbiology", "Biol", "3");
-insert into courses (name, dept, credits) values ("BIOL4170 Microbial Genetics", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4260 Human Anatomy with Lab", "Biol", "4");
 insert into courses (name, dept, credits) values ("BIOL4400	Molecular Biology", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4510	Cancer Biology", "Biol", "3");
@@ -373,7 +372,6 @@ insert into courses (name, dept, credits) values ("BIOL4914	Undergraduate Resear
 insert into courses (name, dept, credits) values ("BIOL4942	Senior Thesis Seminar II", "Biol", "1");
 insert into courses (name, dept, credits) values ("BIOL4952	Senior Thesis Research II", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4921	Advanced Independent Research", "Biol", "6");
-=======
 insert into courses (name, dept, credits) values ("BIOL4170 Microbial Genetics", "Biol", "3");
 
 
@@ -465,13 +463,6 @@ insert into courses(name, dept, credits) values ("HIST1005	Asia in the World I",
 ---ended at asia in the world I on fall2015 cultural diversity courses---
 
 
-=======
----committed still need to do statistics---
---- inserted up to here
->>>>>>> origin/master
-
-=======
-
 # Populate fulfills:
 # bio bs reqs
 insert into fulfills (req_id, course_id) values (45, 13);
@@ -505,12 +496,9 @@ insert into fulfills (req_id, course_id) values (57, 36);
 insert into fulfills (req_id, course_id) values (58, 34);
 insert into fulfills (req_id, course_id) values (58, 35);
 insert into fulfills (req_id, course_id) values (58, 36);
---insert into fulfills (req_id, course_id) values (58, );
-	--biomolecules biol520
---insert into fulfills (req_id, course_id) values (58, );
-	--compsci 1
---insert into fulfills (req_id, course_id) values (58, );
-	--compsci 2
+insert into fulfills (req_id, course_id) values (58, 38);
+insert into fulfills (req_id, course_id) values (58, 88);
+insert into fulfills (req_id, course_id) values (58, 89);
 insert into fulfills (req_id, course_id) values (58, 33);
 --insert into fulfills (req_id, course_id) values (58, );
 	--math 2000 level courses
@@ -547,11 +535,9 @@ insert into fulfills (req_id, course_id) values (70, 12);
 insert into fulfills (req_id, course_id) values (72, 13);
 insert into fulfills (req_id, course_id) values (73, 12);
 insert into fulfills (req_id, course_id) values (73, 17);
---insert into fulfills (req_id, course_id) values (74, );
-	--cell bio biol3040 still needed
+insert into fulfills (req_id, course_id) values (74, 42);
 insert into fulfills (req_id, course_id) values (74, 18);
---insert into fulfills (req_id, course_id) values (74, );
-	--microbio biol4140 still needed
+insert into fulfills (req_id, course_id) values (74, 55);
 insert into fulfills (req_id, course_id) values (75, 15);
 insert into fulfills (req_id, course_id) values (75, 16);
 insert into fulfills (req_id, course_id) values (76, 14);
