@@ -15,16 +15,33 @@
 # Schedule courses:
 # actor: student
 
-	# Assign req to plan:
-	update plan set req = $req
-	where slot = $slot and student = $id;
-	
-	# Assign course to plan:
-	update plan set course = $course
-	where slot = $slot and student = $id;
+	# Populate unassigned requirements:
+	select r.class_cat 
+	from reqs as r, enroll as e
+    where e.student = $id
+     and r.id not in (select req 
+     				  from plan
+     				  where student = e.student);
+
+	# Populate requirements with AP credits:
+	select r.class_cat 
+	from reqs as r
+	inner join aps as a
+	 on r.id = a.req
+	 where a.student = $id;
 	
 	# Mark req as AP:
 	insert into aps (student, req) values ($id, $req);
+
+	# Save schedule:
+
+		# Assign req to plan:
+		update plan set req = $req
+		where slot = $slot and student = $id;
+	
+		# Assign specific course to plan:
+		update plan set course = $course
+		where slot = $slot and student = $id;
 	
 	
 # Add student:
