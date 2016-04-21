@@ -282,9 +282,9 @@ insert into reqs (field, class_cat, number) values (81, 18, 1);
 insert into reqs (field, class_cat, number) values (81, 19, 1);
 insert into reqs (field, class_cat, number) values (81, 20, 1);
 insert into reqs (field, class_cat, number) values (81, 21, 5);
-insert into reqs (field, class_cat, number) values (6, 32, 1);
-insert into reqs (field, class_cat, number) values (6, 33, 1);
-insert into reqs (field, class_cat, number) values (6, 36, 1);
+insert into reqs (field, class_cat, number) values (81, 32, 1);
+insert into reqs (field, class_cat, number) values (81, 33, 1);
+insert into reqs (field, class_cat, number) values (81, 36, 1);
 # bio minor 7
 insert into reqs (field, class_cat, number) values (7, 15, 1);
 insert into reqs (field, class_cat, number) values (7, 16, 1);

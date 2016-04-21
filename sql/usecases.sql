@@ -2,56 +2,66 @@
 
 # View core requirements:
 # actor: student
-select reqs.class_cat
-from reqs
-inner join fields
-on reqs.field = fields.id
-where field.type = 'core'
- and school is null;
+select title
+from class_cats
+where id in (
+	select reqs.class_cat
+	from reqs
+	inner join fields
+	on reqs.field = fields.id
+	where field.type = 'core'
+	 and school is null);
 
 
 # View major requirements:
 # actor: student
-select reqs.class_cat
-from reqs
-inner join fields
-on reqs.field = fields.id
-where fields.id = $field;
+select title
+from class_cats
+where id in (
+	select reqs.class_cat
+	from reqs
+	inner join fields
+	on reqs.field = fields.id
+	where fields.id = $field);
 
 
 # Update field of study:
 # actor: student
 
 	# Populate previous major 1:
-	select field
-	from enroll
-	where student = $id
-	 and type = 'major'
-	 and current = true
+	select fields.name
+	from enroll, fields
+	where enroll.student = $id
+	 and enroll.field = fields.id
+	 and fields.type = 'major'
+	 and enroll.current = true
 	limit 1;
 	
 	# Populate previous major 2:
-	select field
-	from enroll
-	where student = $id
-	 and type = 'major'
-	 and current = true
+	select fields.name
+	from enroll, fields
+	where enroll.student = $id
+	 and enroll.field = fields.id
+	 and fields.type = 'major'
+	 and enroll.current = true
 	limit 1, 1;
 	
 	# Populate previous minor 1:
-	select field
-	from enroll
-	where student = $id
-	 and type = 'minor'
-	 and current = true
+	select fields.name
+	from enroll, fields
+	where enroll.student = $id
+	 and enroll.field = fields.id
+	 and fields.type = 'minor'
+	 and enroll.current = true
 	limit 1;
 	
 	# Populate previous minor 2:
-	select field
-	from enroll
-	where student = $id
-	 and type = 'minor'
-	 and current = true
+	select fields.name
+	from enroll, fields
+	where enroll.student = $id
+	 and enroll.field = fields.id
+	 and fields.type = 'minor'
+	 and enroll.current = true
 	limit 1, 1;
 	
 	# Change existing major 1:
@@ -94,9 +104,11 @@ where fields.id = $field;
 	select r.class_cat 
 	from reqs as r, enroll as e
     where e.student = $id
+     and e.field = r.field
      and r.id not in (select req 
      				  from plan
-     				  where student = e.student);
+     				  where student = e.student
+     				   and req is not null);
 
 	# Populate classes that fulfill selected requirement:
 	select name 
@@ -224,9 +236,11 @@ insert into reqs (field, class_cat, number) values ($field,
 	select r.class_cat 
 	from reqs as r, enroll as e
     where e.student = $id
+     and e.field = r.field
      and r.id not in (select req 
      				  from plan
-     				  where student = e.student);
+     				  where student = e.student
+     				   and req is not null);
      				  
     # Populate requirements with AP credits:
 	select r.class_cat 
