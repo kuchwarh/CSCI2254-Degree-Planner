@@ -123,11 +123,36 @@ insert into reqs (field, class_cat, number) values (1,
 # actor: admin
 
 
-# View student schedule in each slot:
+# View student schedule:
 # actor: admin
-select class_cat 
-from reqs
-where id in (select req
-			 from plan
-			 where slot = $slot
-			  and student = $id);
+
+	# Populate selected reqs in each slot:
+	select class_cat 
+	from reqs
+	where id in (select req
+				 from plan
+				 where slot = $slot
+				  and student = $id);
+				  
+	# Populate selected courses in each slot:
+	select name 
+	from courses
+	where id in (select course
+				 from plan
+				 where slot = $slot
+				  and student = $id);
+				  
+	# Populate unassigned requirements for side bar:
+	select r.class_cat 
+	from reqs as r, enroll as e
+    where e.student = $id
+     and r.id not in (select req 
+     				  from plan
+     				  where student = e.student);
+     				  
+    # Populate requirements with AP credits:
+	select r.class_cat 
+	from reqs as r
+	inner join aps as a
+	 on r.id = a.req
+	 where a.student = $id;
