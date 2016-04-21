@@ -123,5 +123,11 @@ insert into reqs (field, class_cat, number) values (1,
 # actor: admin
 
 
-# View student schedule:
+# View student schedule in each slot:
 # actor: admin
+select class_cat 
+from reqs
+where id in (select req
+			 from plan
+			 where slot = $slot
+			  and student = $id);
