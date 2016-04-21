@@ -48,8 +48,53 @@
 # actor: admin
 insert into students (username, password, school) values ($username, sha1($password), $school);
 insert into plan (slot, student) values (1, $id);
-	-- perform insert into plan for slots 1 - 48.
-	
+insert into plan (slot, student) values (2, $id);
+insert into plan (slot, student) values (3, $id);
+insert into plan (slot, student) values (4, $id);
+insert into plan (slot, student) values (5, $id);
+insert into plan (slot, student) values (6, $id);
+insert into plan (slot, student) values (7, $id);
+insert into plan (slot, student) values (8, $id);
+insert into plan (slot, student) values (9, $id);
+insert into plan (slot, student) values (10, $id);
+insert into plan (slot, student) values (11, $id);
+insert into plan (slot, student) values (12, $id);
+insert into plan (slot, student) values (13, $id);
+insert into plan (slot, student) values (14, $id);
+insert into plan (slot, student) values (15, $id);
+insert into plan (slot, student) values (16, $id);
+insert into plan (slot, student) values (17, $id);
+insert into plan (slot, student) values (18, $id);
+insert into plan (slot, student) values (19, $id);
+insert into plan (slot, student) values (20, $id);
+insert into plan (slot, student) values (21, $id);
+insert into plan (slot, student) values (22, $id);
+insert into plan (slot, student) values (23, $id);
+insert into plan (slot, student) values (24, $id);
+insert into plan (slot, student) values (25, $id);
+insert into plan (slot, student) values (26, $id);
+insert into plan (slot, student) values (27, $id);
+insert into plan (slot, student) values (28, $id);
+insert into plan (slot, student) values (29, $id);
+insert into plan (slot, student) values (30, $id);
+insert into plan (slot, student) values (31, $id);
+insert into plan (slot, student) values (32, $id);
+insert into plan (slot, student) values (33, $id);
+insert into plan (slot, student) values (34, $id);
+insert into plan (slot, student) values (35, $id);
+insert into plan (slot, student) values (36, $id);
+insert into plan (slot, student) values (37, $id);
+insert into plan (slot, student) values (38, $id);
+insert into plan (slot, student) values (39, $id);
+insert into plan (slot, student) values (40, $id);
+insert into plan (slot, student) values (41, $id);
+insert into plan (slot, student) values (42, $id);
+insert into plan (slot, student) values (43, $id);
+insert into plan (slot, student) values (44, $id);
+insert into plan (slot, student) values (45, $id);
+insert into plan (slot, student) values (46, $id);
+insert into plan (slot, student) values (47, $id);
+insert into plan (slot, student) values (48, $id);	
 	
 # Add core requirements:
 # actor: admin
