@@ -302,6 +302,11 @@ insert into class_cats (title) values ("French 300 Level Courses");
 insert into class_cats (title) values ("French 400 Level Courses");
 insert into class_cats (title) values ("French Electives");
 
+insert into class_cats (title) values ("iGE 201-208");
+insert into class_cats (title) values ("GE 220 EARTH MATERIALS");
+insert into class_cats (title) values ("Envrionmental Science Elective Courses");
+insert into class_cats (title) values ("Senior Research Experience");
+insert into class_cats (title) values ("Co-Requisite Courses in Natural Sciences and Mathematics");
 
 
 # Populate reqs:
