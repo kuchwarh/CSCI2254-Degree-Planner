@@ -323,7 +323,6 @@ insert into courses (name, dept, credits) values ("BIOL4320 Developmental Biolog
 insert into courses (name, dept, credits) values ("BIOL4590 Introduction to Neuroscience", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL4330 Human Physiology with Lab", "Biol", "4");
 insert into courses (name, dept, credits) values ("BIOL4350 Biological Chemistry", "Biol", "3");
-<<<<<<< HEAD
 insert into courses (name, dept, credits) values ("BIOL5290 Biomolecules: Molecular Driving Forces BIOL 5290", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL1100	General Biology", "Biol", "3");
 insert into courses (name, dept, credits) values ("BIOL1420	The Genetic Century", "Biol", "3");
@@ -374,9 +373,6 @@ insert into courses (name, dept, credits) values ("BIOL4952	Senior Thesis Resear
 insert into courses (name, dept, credits) values ("BIOL4921	Advanced Independent Research", "Biol", "6");
 insert into courses (name, dept, credits) values ("BIOL4170 Microbial Genetics", "Biol", "3");
 
-
----committed---
->>>>>>> origin/master
 insert into courses (name, dept, credits) values ("CHEM1109 General Chemistry 1", "Chem", "3");
 insert into courses (name, dept, credits) values ("CHEM1110 General Chemistry Lab 1", "Chem", "1");
 insert into courses (name, dept, credits) values ("CHEM1111 General Chemistry 2", "Chem", "3");
@@ -393,7 +389,7 @@ insert into courses (name, dept, credits) values ("MATH1101 Calculus 2", "Math",
 insert into courses (name, dept, credits) values ("PHYS2100 Physics 1 with Lab", "Phys", "4");
 insert into courses (name, dept, credits) values ("PHYS2101 Physics 2 with Lab", "Phys", "4");
 insert into courses (name, dept, credits) values ("BIOL2300 Biostatistics", "Biol", "3");
-<<<<<<< HEAD
+
 insert into courses (name, dept, credits) values ("ECON1151 Statistics", "Econ", "3");
 insert into courses (name, dept, credits) values ("MATH3353 Statistics", "Math", "3"); 
 insert into courses (name, dept, credits) values ("CSCI1101 Computer Science 1", "Csci", "3");
