@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Degree Planner</title>	
+</head>
+<body>
+
+	<fieldset>
+	<legend>Add Student User:</legend>
+		<form id="addform" method="post" action="php/insertstudent.php">
+			Username: 
+			<input type="text" id="username" name="username">
+			<div id="nameError"></div>
+			<br>
+			Password:
+			<input type="text" id="password" name="password">
+			<div id="passwordError"></div>
+			<br>
+			School:
+			<select id="school" name="school">
+				<option value="">&nbsp;</option>
+				<option value="mcas">MCAS</option>
+				<option value="csom">CSOM</option>
+				<option value="lsoe">LSOE</option>
+				<option value="cson">CSON</option>
+			</select>
+			<div id="schoolError"></div>
+			<br>
+			<input type="submit" value="Add Student">
+		</form>
+	</fieldset>
+
+	<script type="text/javascript" src="js/addval.js"></script>
+
+</body>
+</html>
