@@ -9,7 +9,7 @@ if (!isset($_POST['username']) or !isset($_POST['password'])
 		
 } else {
 	
-	setcookie('loginUserID', getID($_POST['username']));
+	setcookie('loginUserID', getID($_POST['username']), time() + 60*60*24*30, '/');
 		
 	header("Location: ../studenthome.html");
 		
