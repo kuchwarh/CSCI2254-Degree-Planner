@@ -10,53 +10,20 @@
   <body>
     <h1>Student Home</h1>
       
-      <table id="viewcore"><tr><th>Req</th><th>AP</th><th>Semester</th></tr>
-      </table>
+     
       
       
       <fieldset id="coreform">
         <legend id= "formleg"> View Core </legend>
-        <form method="get" id="att_form" onsubmit="validate()" action="core.php">
+        <form method="post" id="att_form" onsubmit="validate()" action="core.php">
             <br>
-            Name: <span id="info1"><input type="text" name="name" id="name"><span id="nameval"></span></span><br>
-
-            Category: <span id="info2"><input type="text" name="category" id="category"><span id="categoryval"></span></span><br>
-
-            Rating: <span id="info3"><select name="stars" id="rating">
-                <option> * </option>
-                <option> ** </option>
-                <option> *** </option>
-                <option> **** </option>
-                <option> ***** </option></select></span><br>
-                
-            Price: <span id="info4"><select name="price" id="price">
-                <option> $ </option>
-                <option> $$ </option>
-                <option> $$$ </option>
-                <option> $$$$ </option>
-                <option> $$$$$ </option></select></span><br>
-
-            Entered By: <span
-                              id="info5"><input type="text" name="entered_by" id="entered_by"><span id="enteredbyval"></span></span><br>
-
-            URL: <span id="info6"><input type="text" name="url" id="url"><span id="urlval"></span></span><br>
-
-            Phone:<span id="info7"><input type="text" name="phone" id="phone"><span id="phoneval"></span></span><br>
-
-            Address:<span id="info8"><input type="text" name="address" id="address"><span id="addressval"></span></span><br>
+            <table id="viewcore"><tr><th>Req</th><th>AP</th><th>Semester</th></tr>
+            </table>
             <br>
-            Comments:<span id="commentval"></span><br>
-            <textarea rows="5" cols="50" name="comment" id="commentbox"></textarea><br>
-            <br>
-           <!-- <button type="button" name="formsubmit" id="formsubmit"  onclick="validate()">Add This Attraction</button> -->
-            <button id="ata" type="submit">Add This Attraction!</button>
-            <!--<input type="submit" id ="ata" class ="ati" value="Add this attraction!"> -->
-            
+            <input type="submit" id ="save" class ="save" value="Save">  
         </form>
       
-          <!--just a table and some td's are inputs
-          //select from class cats from reqs where field = 1 --> 
-  	
+         
   	
     
       
@@ -114,30 +81,8 @@
                  console.log(id_array); 
              });
             
-            //this returns ["1", "1061", "1062"] when click the first three buttons
-        
-/*    $("#hide").click(function(event){
-        $.getJSON( "hide.php" , function(data) {
-                         
-        
-        
-                            var count = 0;
-                           $.each(data, function(i, item){
-								$("#results").append("<tr><td> <input class ='boxes' type='checkbox' name='count' value='"+item.attraction_id+"'/>&nbsp;</td><td>"                   
-                                                     + item.name + "</td><td>" + item.entered_by + "</td><td>" + item.category + "</td><td>" + item.stars + "</td><td>" + item.price_range + "</td><td>" + item.url + "</td><td>" + item.comment + "</td></tr>");
-                               count = count + 1;
-							});
-                            
-                 	})
-						.fail(function() {
-								console.log( "getJSON error" );
-                });
-        
-                
-    
-                
-               
-         });  */
+           
+
         });
      
         
