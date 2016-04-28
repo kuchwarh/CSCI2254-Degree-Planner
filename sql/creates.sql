@@ -32,7 +32,7 @@ primary key (id))  engine = InnoDB;
 # Create table for requirements: 
 
 create table reqs (id int not null auto_increment, field int not null, class_cat int not
-null, number int not null, primary key (id), foreign key (field) references fieldss_of_study(id), foreign key
+null, number int not null, primary key (id), foreign key (field) references fields_of_study(id), foreign key
 (class_cat) references class_cats(id))  engine = InnoDB;
 
 # Create table for courses:

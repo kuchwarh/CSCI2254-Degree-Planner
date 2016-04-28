@@ -52,88 +52,88 @@ insert into students (username, password, school) values ('alane1c', sha1('rutru
 insert into students (username, password, school) values ('sduncan1d', sha1('tempus'), 'csom');
 
 # Populate fields of study:
-insert into fields (name, type) values ("university core", "core");
+insert into fields_of_study (name, type) values ("university core", "core");
 # mcas majors & minors
-insert into fields (name, school, type) values ("computer science bs", "mcas", "major");
-insert into fields (name, school, type) values ("computer science ba", "mcas", "major");
-insert into fields (name, school, type) values ("computer science", "mcas", "minor");
-insert into fields (name, school, type) values ("biology bs", "mcas", "major");
-insert into fields (name, school, type) values ("biology ba", "mcas", "major");
-insert into fields (name, school, type) values ("biochemistry bs", "mcas", "major");
-insert into fields (name, school, type) values ("biology", "mcas", "minor");
-insert into fields (name, school, type) values ("chemistry", "mcas", "major");
-insert into fields (name, school, type) values ("chemistry", "mcas", "minor");
-insert into fields (name, school, type) values ("art history", "mcas", "major");
-insert into fields (name, school, type) values ("art history", "mcas", "minor");
-insert into fields (name, school, type) values ("film", "mcas", "major");
-insert into fields (name, school, type) values ("film", "mcas", "minor");
-insert into fields (name, school, type) values ("studio art", "mcas", "major");
-insert into fields (name, school, type) values ("studio art", "mcas", "minor");
-insert into fields (name, school, type) values ("classics", "mcas", "major");
-insert into fields (name, school, type) values ("ancient civ", "mcas", "minor");
-insert into fields (name, school, type) values ("communications", "mcas", "major");
-insert into fields (name, school, type) values ("communications", "mcas", "major");
-insert into fields (name, school, type) values ("env geoscience", "mcas", "major");
-insert into fields (name, school, type) values ("geological sciences", "mcas", "major");
-insert into fields (name, school, type) values ("economics", "mcas", "major");
-insert into fields (name, school, type) values ("english", "mcas", "major");
-insert into fields (name, school, type) values ("environmental studies", "mcas", "major");
-insert into fields (name, school, type) values ("french", "mcas", "major");
-insert into fields (name, school, type) values ("german studies", "mcas", "major");
-insert into fields (name, school, type) values ("hispanic studies", "mcas", "major");
-insert into fields (name, school, type) values ("history", "mcas", "major");
-insert into fields (name, school, type) values ("international studies", "mcas", "major");
-insert into fields (name, school, type) values ("islamic civ", "mcas", "major");
-insert into fields (name, school, type) values ("italian", "mcas", "major");
-insert into fields (name, school, type) values ("linguistics", "mcas", "major");
-insert into fields (name, school, type) values ("math ba", "mcas", "major");
-insert into fields (name, school, type) values ("math bs", "mcas", "major");
-insert into fields (name, school, type) values ("music", "mcas", "major");
-insert into fields (name, school, type) values ("philosophy", "mcas", "major");
-insert into fields (name, school, type) values ("physics", "mcas", "major");
-insert into fields (name, school, type) values ("political science", "mcas", "major");
-insert into fields (name, school, type) values ("psychology", "mcas", "major");
-insert into fields (name, school, type) values ("russian", "mcas", "major");
-insert into fields (name, school, type) values ("slavic studies", "mcas", "major");
-insert into fields (name, school, type) values ("sociology", "mcas", "major");
-insert into fields (name, school, type) values ("theatre", "mcas", "major");
-insert into fields (name, school, type) values ("theology", "mcas", "major");
-insert into fields (name, school, type) values ("chinese", "mcas", "minor");
-insert into fields (name, school, type) values ("geological sciences", "mcas", "minor");
-insert into fields (name, school, type) values ("environmental studies", "mcas", "minor");
-insert into fields (name, school, type) values ("economics", "mcas", "minor");
-insert into fields (name, school, type) values ("english", "mcas", "minor");
-insert into fields (name, school, type) values ("french", "mcas", "minor");
-insert into fields (name, school, type) values ("german", "mcas", "minor");
-insert into fields (name, school, type) values ("german studies", "mcas", "minor");
-insert into fields (name, school, type) values ("hispanic studies", "mcas", "minor");
-insert into fields (name, school, type) values ("history", "mcas", "minor");
-insert into fields (name, school, type) values ("islamic civ", "mcas", "minor");
-insert into fields (name, school, type) values ("linguistics", "mcas", "minor");
-insert into fields (name, school, type) values ("russian", "mcas", "minor");
-insert into fields (name, school, type) values ("arabic studies", "mcas", "minor");
-insert into fields (name, school, type) values ("east european studies", "mcas", "minor");
-insert into fields (name, school, type) values ("jewish studies", "mcas", "minor");
-insert into fields (name, school, type) values ("math", "mcas", "minor");
-insert into fields (name, school, type) values ("scientific computing", "mcas", "minor");
-insert into fields (name, school, type) values ("music", "mcas", "minor");
-insert into fields (name, school, type) values ("philosophy", "mcas", "minor");
-insert into fields (name, school, type) values ("physics", "mcas", "minor");
-insert into fields (name, school, type) values ("sociology", "mcas", "minor");
-insert into fields (name, school, type) values ("theology", "mcas", "minor");
-insert into fields (name, school, type) values ("aad studies", "mcas", "minor");
-insert into fields (name, school, type) values ("american studies", "mcas", "minor");
-insert into fields (name, school, type) values ("asian american studies", "mcas", "minor");
-insert into fields (name, school, type) values ("asian studies", "mcas", "minor");
-insert into fields (name, school, type) values ("catholic studies", "mcas", "minor");
-insert into fields (name, school, type) values ("faith peace & justice", "mcas", "minor");
-insert into fields (name, school, type) values ("international studies", "mcas", "minor");
-insert into fields (name, school, type) values ("irish studies", "mcas", "minor");
-insert into fields (name, school, type) values ("latin american studies", "mcas", "minor");
-insert into fields (name, school, type) values ("social impact", "mcas", "minor");
-insert into fields (name, school, type) values ("medical humanities", "mcas", "minor");
-insert into fields (name, school, type) values ("psychoanalytic", "mcas", "minor");
-insert into fields (name, school, type) values ("womens studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("computer science bs", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("computer science ba", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("computer science", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("biology bs", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("biology ba", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("biochemistry bs", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("biology", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("chemistry", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("chemistry", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("art history", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("art history", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("film", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("film", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("studio art", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("studio art", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("classics", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("ancient civ", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("communications", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("communications", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("env geoscience", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("geological sciences", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("economics", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("english", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("environmental studies", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("french", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("german studies", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("hispanic studies", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("history", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("international studies", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("islamic civ", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("italian", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("linguistics", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("math ba", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("math bs", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("music", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("philosophy", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("physics", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("political science", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("psychology", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("russian", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("slavic studies", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("sociology", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("theatre", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("theology", "mcas", "major");
+insert into fields_of_study (name, school, type) values ("chinese", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("geological sciences", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("environmental studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("economics", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("english", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("french", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("german", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("german studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("hispanic studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("history", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("islamic civ", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("linguistics", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("russian", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("arabic studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("east european studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("jewish studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("math", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("scientific computing", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("music", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("philosophy", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("physics", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("sociology", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("theology", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("aad studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("american studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("asian american studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("asian studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("catholic studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("faith peace & justice", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("international studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("irish studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("latin american studies", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("social impact", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("medical humanities", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("psychoanalytic", "mcas", "minor");
+insert into fields_of_study (name, school, type) values ("womens studies", "mcas", "minor");
 
 
 # Populate class_cats:
@@ -258,6 +258,17 @@ insert into class_cats (title) values ("Co-Requisite Courses in Natural Sciences
 <<<<<<< Updated upstream
 -- inserted up to here
  
+# core
+insert into class_cats (title) values ("Arts");
+insert into class_cats (title) values ("Cultural Diversity");
+insert into class_cats (title) values ("History");
+insert into class_cats (title) values ("Literature");
+insert into class_cats (title) values ("Mathematics");
+insert into class_cats (title) values ("Natural Science");
+insert into class_cats (title) values ("Philosophy");
+insert into class_cats (title) values ("Social Science");
+insert into class_cats (title) values ("Theology");
+insert into class_cats (title) values ("Writing");
  
 =======
 
@@ -314,6 +325,9 @@ insert into reqs (field, class_cat, number) values (82, 53, 1);
 insert into reqs (field, class_cat, number) values (82, 51, 1);
 insert into reqs (field, class_cat, number) values (82, 52, 1);
 insert into reqs (field, class_cat, number) values (82, 54, 2);
+
+# core requirements 1
+
 
 
 # Populate courses:
