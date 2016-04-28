@@ -1,16 +1,16 @@
 # Drop table queries:
 
-drop table fulfills;
-drop table enroll;
-drop table slots;
-drop table plan;
-drop table admins;
-drop table students;
-drop table reqs;
-drop table courses;
-drop table fields;
-drop table class_cats;
-drop table slots;
+drop table fulfills; 
+drop table enroll; 
+drop table slots; 
+drop table plan; 
+drop table admins; 
+drop table students; 
+drop table reqs; 
+drop table courses; 
+drop table fields; 
+drop table class_cats; 
+drop table slots; 
 
 # Create table for student users:
 

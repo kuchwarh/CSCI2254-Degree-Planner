@@ -255,9 +255,16 @@ insert into class_cats (title) values ("GE 220 EARTH MATERIALS");
 insert into class_cats (title) values ("Envrionmental Science Elective Courses");
 insert into class_cats (title) values ("Senior Research Experience");
 insert into class_cats (title) values ("Co-Requisite Courses in Natural Sciences and Mathematics");
+<<<<<<< Updated upstream
 -- inserted up to here
  
  
+=======
+
+insert into class_cats (title) values ("Co-Requisite Courses in Natural Sciences and Mathematics");
+;
+
+>>>>>>> Stashed changes
 # Populate reqs:
 # bio bs 6
 insert into reqs (field, class_cat, number) values (6, 15, 1);
