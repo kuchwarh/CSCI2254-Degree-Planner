@@ -1,4 +1,5 @@
-# CSCI2254-Project
+# Degree Planner
+CSCI2254-Project
 
 Rahul Rakhit
 
