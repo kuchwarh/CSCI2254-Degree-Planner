@@ -29,10 +29,17 @@
 		$fields[] = $obj;
 	};
 	foreach ($fields as $field) {
-		$setfalse = "update enroll set current = false where field = '$field->field' and student = '$id'";
+		$setfalse = "update enroll set current = false where field = '$field->field' 
+					 and student = '$id' and field not in (1)";
 		perform_query($dbc, $setfalse);
 	};
 	
+	$selectold = "select field from enroll where student = '$id' and current = false";
+	$resultold = perform_query($dbc, $selectold);
+	$oldfields = array();
+	while ($obj = mysqli_fetch_object($resultold)) {
+		$oldfields[] = $obj;
+	};
 	$needinsert = "select id from fields_of_study 
 				   where id in ('$major1', '$major2', '$minor1', '$minor2') 
 				   and id not in (select field from enroll 
@@ -42,9 +49,21 @@
 	while ($obj = mysqli_fetch_object($result2)) {
 		$infields[] = $obj;
 	};
+	$found = false;
 	foreach ($infields as $field) {
-		$insert = "insert into enroll (field, student, current) values ('$field->id', '$id', true)";
-		perform_query($dbc, $insert);
+		while (!$found) {
+			foreach ($oldfields as $oldfield) {
+				if($field->id == $oldfield->field) {
+					$update = "update enroll set current = true where student = '$id' and field = '$field->id'";
+					perform_query($dbc, $update);
+					$found = true;
+				};
+		};
+		if (!$found) {
+			$insert = "insert into enroll (field, student, current) values ('$field->id', '$id', true)";
+			perform_query($dbc, $insert);
+			};
+		};
 	};
 	
 	header("Location: ../fieldupdate.html");
