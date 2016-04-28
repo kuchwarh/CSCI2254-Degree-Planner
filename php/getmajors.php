@@ -3,10 +3,9 @@
 	$id = $_COOKIE['loginUserID'];
 
 	$dbc = connect_to_db('gonzalyz');
-	$query = "select id, name from fields_of_study where type = 'minor' and 
-			 id not in (select fields_of_study.id from fields_of_study, enroll 
-			 			where enroll.student = '$id' and enroll.field = fields_of_study.id 
-			 			and current = true and fields_of_study.type = 'minor')";
+	$query = "select fields_of_study.id, fields_of_study.name from fields_of_study, enroll 
+			where enroll.student = '$id' and enroll.field = fields_of_study.id and 
+			enroll.current = true and fields_of_study.type = 'major'";
 	$result = perform_query($dbc, $query);
 	if ( mysqli_num_rows( $result ) == 0 ) {
 		die("bad query $query");
