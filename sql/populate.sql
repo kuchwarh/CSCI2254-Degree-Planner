@@ -327,7 +327,16 @@ insert into reqs (field, class_cat, number) values (82, 52, 1);
 insert into reqs (field, class_cat, number) values (82, 54, 2);
 
 # core requirements 1
-
+insert into reqs (field, class_cat, number) values (1, 116, 1);
+insert into reqs (field, class_cat, number) values (1, 117, 1);
+insert into reqs (field, class_cat, number) values (1, 118, 2);
+insert into reqs (field, class_cat, number) values (1, 119, 1);
+insert into reqs (field, class_cat, number) values (1, 120, 1);
+insert into reqs (field, class_cat, number) values (1, 121, 2);
+insert into reqs (field, class_cat, number) values (1, 122, 2);
+insert into reqs (field, class_cat, number) values (1, 123, 2);
+insert into reqs (field, class_cat, number) values (1, 124, 2);
+insert into reqs (field, class_cat, number) values (1, 125, 1);
 
 
 # Populate courses:
