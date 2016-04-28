@@ -3,13 +3,15 @@
 
 if (!isset($_POST['username']) or !isset($_POST['password'])
 	or (0 == checklogin($_POST['username'], $_POST['password']))) {
-		header("Location: ../login.html");
+		echo "<script>alert('Incorrect username or password.');
+		window.location.href='../studentlogin.html';
+		</script>";
 		
 } else {
 	
 	setcookie('loginUserID', getID($_POST['username']));
 		
-	header("Location: studenthome.html");
+	header("Location: ../studenthome.html");
 		
 };
 
