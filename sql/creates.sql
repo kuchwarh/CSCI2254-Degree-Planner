@@ -20,7 +20,7 @@ primary key (id)) engine = InnoDB;
 
 # Create table for fields of study:
 
-create table fields (id int not null auto_increment, name varchar(30) not null,
+create table fields_of_study (id int not null auto_increment, name varchar(30) not null,
 school enum('mcas', 'csom', 'cson', 'lsoe'), type enum('major', 'minor', 
 'concentration', 'core'), primary key (id))  engine = InnoDB;
 
@@ -32,7 +32,7 @@ primary key (id))  engine = InnoDB;
 # Create table for requirements: 
 
 create table reqs (id int not null auto_increment, field int not null, class_cat int not
-null, number int not null, primary key (id), foreign key (field) references fields(id), foreign key
+null, number int not null, primary key (id), foreign key (field) references fieldss_of_study(id), foreign key
 (class_cat) references class_cats(id))  engine = InnoDB;
 
 # Create table for courses:
@@ -50,7 +50,7 @@ not null, primary key (id), foreign key (req_id) references reqs(id), foreign ke
 
 create table enroll (id int not null auto_increment, student int not null, field int
 not null, current boolean not null, primary key (id), foreign key (student) references
-students(id), foreign key (field) references fields(id))  engine = InnoDB;
+students(id), foreign key (field) references fieldss_of_study(id))  engine = InnoDB;
 
 # Create table for slots:
 
