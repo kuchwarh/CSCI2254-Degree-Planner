@@ -50,7 +50,7 @@ not null, primary key (id), foreign key (req_id) references reqs(id), foreign ke
 
 create table enroll (id int not null auto_increment, student int not null, field int
 not null, current boolean not null, primary key (id), foreign key (student) references
-students(id), foreign key (field) references fieldss_of_study(id))  engine = InnoDB;
+students(id), foreign key (field) references fields_of_study(id))  engine = InnoDB;
 
 # Create table for slots:
 

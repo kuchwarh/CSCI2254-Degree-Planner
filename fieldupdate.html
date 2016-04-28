@@ -1,18 +1,42 @@
-<?php include(fieldupdate.php) ?>
+<!-- <?php include(fieldupdate.php); ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Degree Planner</title>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/majorupdate.js"></script>
+	<script type="text/javascript" src="js/minorupdate.js"></script>
+	
 </head>
 <body>
 
-	<form id="updatefields" method="post">
-	
-	
-	
-	</form>
+	<fieldset>
+	<legend>Update Fields of Study</legend>
 
+	<form id="updatefields" method="post">
+		Major 1: 
+		<select id='major1'>
+			<option value="">&nbsp;</option>
+		</select>
+		<br>
+		Major 2: 
+		<select id='major2'>
+			<option value="">&nbsp;</option>
+		</select>
+		<br>
+		Minor 1: 
+		<select id='minor1'>
+			<option value="">&nbsp;</option>
+		</select>
+		<br>
+		Minor 2: 
+		<select id='minor2'>
+			<option value="">&nbsp;</option>
+		</select>
+	</form>
+	</fieldset>
 
 </body>
 </html>
