@@ -15,6 +15,22 @@ while ( $obj = mysqli_fetch_object( $result ) ) {
 	}
 	echo json_encode($core_data);
 
+$id = $_COOKIE['loginUserID'];
+
+
+$query2 = "SELECT slots.semester, reqs.number FROM `class_cats`, `reqs` WHERE plan.student =$id";
+
+$result2 = perform_query($dbc, $query);
+
+$sem_data = array();	// put the rows as objects in an array
+
+while ( $sem = mysqli_fetch_object( $result2 ) ) {
+		$sem_data[] = $sem;
+	}
+	echo json_encode($sem_data);
+
+
+
 	mysqli_close($dbc);
 
 
