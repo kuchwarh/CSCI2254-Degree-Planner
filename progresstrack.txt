@@ -1,0 +1,23 @@
+TO DO
+
+use cases:
+	student - view field of study reqs
+	student - view core
+	student - schedule courses
+	admin - add core req
+	admin - add field of study req
+	admin - view student schedule
+	
+student sign-up
+
+add API
+	
+	
+100% DONE
+
+use cases:
+	student - update fields of study
+	admin - add student
+	
+student log-in
+admin log-in
