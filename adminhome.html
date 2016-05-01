@@ -44,9 +44,32 @@
 			<input type="submit" value="Add Requirement">
 		</form>
 	</fieldset>
+	
+	<fieldset>
+	<legend>Add Field of Study Requirement:</legend>
+		<form id="addfieldform" method="post" action="php/insertfieldreq.php">
+			Field of Study:
+			<select id='fields' name='fields'>
+				<option value="">&nbsp;</option>
+			</select>
+			<div id="fieldsError"></div>
+			<br>
+			Requirement Title:
+			<input type="text" id="fieldreqtitle" name="fieldreqtitle">
+			<div id="fieldreqtitleError"></div>
+			<br>
+			Number Required:
+			<input type="text" id="fieldreqnumber" name="fieldreqnumber">
+			<div id="fieldreqnumberError"></div>
+			<br>
+			<input type="submit" value="Add Requirement">
+		</form>
+	</fieldset>
 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/addval.js"></script>
 	<script type="text/javascript" src="js/addreq.js"></script>
+	<script type="text/javascript" src="js/showfields.js"></script>
 
 </body>
 </html>
