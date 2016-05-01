@@ -29,8 +29,24 @@
 			<input type="submit" value="Add Student">
 		</form>
 	</fieldset>
+	
+	<fieldset>
+	<legend>Add Core Requirement:</legend>
+		<form id="addcoreform" method="post" action="php/insertcorereq.php">
+			Requirement Title:
+			<input type="text" id="corereqtitle" name="corereqtitle">
+			<div id="corereqtitleError"></div>
+			<br>
+			Number Required:
+			<input type="text" id="corereqnumber" name="corereqnumber">
+			<div id="corereqnumberError"></div>
+			<br>
+			<input type="submit" value="Add Requirement">
+		</form>
+	</fieldset>
 
 	<script type="text/javascript" src="js/addval.js"></script>
+	<script type="text/javascript" src="js/addreq.js"></script>
 
 </body>
 </html>

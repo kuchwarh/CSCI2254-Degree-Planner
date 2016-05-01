@@ -4,7 +4,6 @@ use cases:
 	student - view field of study reqs
 	student - view core
 	student - schedule courses
-	admin - add core req
 	admin - add field of study req
 	admin - view student schedule
 	
@@ -18,6 +17,7 @@ add API
 use cases:
 	student - update fields of study
 	admin - add student
+	admin - add core req
 	
 student log-in
 admin log-in
