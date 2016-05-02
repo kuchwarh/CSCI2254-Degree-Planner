@@ -4,8 +4,6 @@ use cases:
 	student - view core
 	student - schedule courses
 	admin - view student schedule
-	
-student sign-up
 
 add API
 	
@@ -21,3 +19,4 @@ use cases:
 	
 student log-in
 admin log-in
+student sign-up
