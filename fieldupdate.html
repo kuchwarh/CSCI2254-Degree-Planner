@@ -6,36 +6,50 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/majorupdate.js"></script>
 	<script type="text/javascript" src="js/minorupdate.js"></script>
+	<script type="text/javascript" src="js/showfields.js"></script>
+	<script type="text/javascript" src="js/viewfieldreqs.js"></script>
 	
 </head>
 <body>
 
 	<fieldset>
 	<legend>Update Fields of Study</legend>
-
-	<form id="updatefields" method="post" action="php/runfieldupdate.php">
-		Major 1: 
-		<select id='major1' name='major1'>
-			<option value="">&nbsp;</option>
-		</select>
-		<br>
-		Major 2: 
-		<select id='major2' name='major2'>
-			<option value="">&nbsp;</option>
-		</select>
-		<br>
-		Minor 1: 
-		<select id='minor1' name='minor1'>
-			<option value="">&nbsp;</option>
-		</select>
-		<br>
-		Minor 2: 
-		<select id='minor2' name='minor2'>
-			<option value="">&nbsp;</option>
-		</select>
-		<br>
-		<input type='submit' value='Update'>
-	</form>
+		<form id="updatefields" method="post" action="php/runfieldupdate.php">
+			Major 1: 
+			<select id='major1' name='major1'>
+				<option value="">&nbsp;</option>
+			</select>
+			<br>
+			Major 2: 
+			<select id='major2' name='major2'>
+				<option value="">&nbsp;</option>
+			</select>
+			<br>
+			Minor 1: 
+			<select id='minor1' name='minor1'>
+				<option value="">&nbsp;</option>
+			</select>
+			<br>
+			Minor 2: 
+			<select id='minor2' name='minor2'>
+				<option value="">&nbsp;</option>
+			</select>
+			<br>
+			<input type='submit' value='Update'>
+		</form>
+	</fieldset>
+	
+	<fieldset>
+	<legend>View Field of Study Requirements:</legend>
+		<form id="viewfieldreqs" method="post">
+			Field of Study:
+			<select id='fields' name='fields'>
+				<option value="">&nbsp;</option>
+			</select>
+			<input type='button' id='showreqs' name='showreqs' value='View Requirements'>
+		</form>
+		<table id='reqs'>
+		</table>
 	</fieldset>
 
 </body>
