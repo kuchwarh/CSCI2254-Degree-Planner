@@ -4,11 +4,12 @@
 	<meta charset="utf-8" />
 	<title>Student_Homepage</title>
 	<link rel="stylesheet" type="text/css" href="css/studenthome.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
    
 
   </head>
   <body>
-    <h1>Student Home</h1>
+    <h1>Student_Home</h1>
       
      
       
@@ -22,88 +23,12 @@
             <br>
             <input type="submit" id ="save" class ="save" value="Save">  
         </form>
+      </fieldset>
+      
+<script type="text/javascript" src="js/coretable.js"></script>
       
          
   	
-    
-      
-       
-   
-         
-  
-         
-
-  	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript">
-		$(document).ready(function(){
-            
-                 $('#formdiv').addClass('hidden');
-            //form hidden on load
-            
-                  $('#att_button').click(function() {
-                $('#formdiv').toggleClass('hidden');
-		  }); 
-						
-                $.getJSON( "php/core.php" , function(data) {
-                         
-        
-        
-                            var count = 0;
-                           $.each(data, function(i, item){
-                               var string ="";
-                               
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
-                               
-                               if(item.number>1){
-                                   string = string +"<input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
-                               }
-                               
-                               string = string + "</td><td><select name = 'Semester'><br><br><option value='Spring' id ='Spring'>Spring</option> <option value='Fall' id='Fall'>Fall</option></select>";
-                               
-                               
-                                if(item.number>1){
-                                   string = string +"<select name = 'Semester'><br><br><option value='Spring' id ='Spring'>Spring</option> <option value='Fall' id='Fall'>Fall</option></select>";
-                               }
-                               string = string + "</td></tr>";
-                               
-								$("#viewcore").append(string);          
-                               
-                               
-                                        
-                                                
-                               
-                               
-                               count = count + 1;
-							});
-                            
-                 	})
-						.fail(function() {
-								console.log( "getJSON error" );
-                });
-             $("#clickme").click(function(event){
-                 id_array = Array();
-                 var values = $('input:checkbox:checked').map(function () {
-                     id_array.push(this.value);
-                    })
-                  $.post("att_id.php",
-                    {
-                  idz: id_array,
-                    },
-            function(data){
-            alert("Data: " + data);
-                   //   alert('hello');
-                  });
-                 console.log(id_array); 
-             });
-            
-            //this returns ["1", "1061", "1062"] when click the first three buttons
-        
-
-        });
-     
-        
-    </script>
 
   </body>
 </html>
