@@ -8,6 +8,14 @@
 	<fieldset>
 	<legend>Add Student User:</legend>
 		<form id="addform" method="post" action="php/insertstudent.php">
+			First Name:
+			<input type="text" id="firstname" name="firstname">
+			<div id="firstnameError"></div>
+			<br>
+			Last Name:
+			<input type="text" id="lastname" name="lastname">
+			<div id="lastnameError"></div>
+			<br>
 			Username: 
 			<input type="text" id="username" name="username">
 			<div id="nameError"></div>
@@ -63,6 +71,19 @@
 			<div id="fieldreqnumberError"></div>
 			<br>
 			<input type="submit" value="Add Requirement">
+		</form>
+	</fieldset>
+	
+	<fieldset>
+	<legend>View Student Plan:</legend>
+		<form id="viewplan" method="post">
+			Student:
+			<select id='students' name='students'>
+				<option value="">&nbsp;</option>
+			</select>
+			<div id="studentsError"></div>
+			<br>
+			<input type="submit" value="View Plan">
 		</form>
 	</fieldset>
 

@@ -1,5 +1,7 @@
 <?php include("dbconn.php");
 
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	$school = $_POST['school'];
@@ -19,7 +21,7 @@
 	} else {
 	
 	$dbc = connect_to_db('gonzalyz');
-	$insertstud = "insert into students (username, password, school) values ('$username', sha1('$password'), '$school')";
+	$insertstud = "insert into students (username, password, school, first_name, last_name) values ('$username', sha1('$password'), '$school', '$firstname', '$lastname')";
 	perform_query($dbc, $insertstud);
 	
 	$getslots = "select id from slots";
