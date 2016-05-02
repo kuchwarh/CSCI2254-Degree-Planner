@@ -1,43 +1,34 @@
-$(document).ready(function(){
-         
+<?php 
+
+include('dbconn.php');
+
+$id = $_COOKIE['loginUserID'];
+
+$dbc = connect_to_db('gonzalyz');
+
+//$query = "SELECT class_cats.title, reqs.number FROM `class_cats`, `reqs` WHERE reqs.class_cat = class_cats.id and reqs.field=1;";
+
+
+$query = "select c.title, r.number
+					  from class_cats as c, reqs as r, enroll as e
+					  where e.student = '$id'
+					  and c.id = r.class_cat
+					  and e.field = r.field
+                      and r.field = '1'
+					  and r.id not in (select req 
+									  from plan
+									  where student = e.student
+									  and req is not null)
+					  and r.id not in (select req
+					  				   from aps
+					  				   where student = e.student)";
+$result = perform_query($dbc, $query);
     
-            	$.ajax({
-		          url: "php/core.php",
-		          success: function(data) {
-                      console.log(JSON.stringify(data));
-			     $.each(data, function(i, item) {
-                     var string ="";
-                               
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
-                               
-                               if(item.number>1){
-                                   string = string +"<input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
-                               }
-                               
-                               string = string + "</td><td><select name = 'Semester'><br><br><option value='Spring' id ='Spring'>"+item.number+"</option> <option value='Fall' id='Fall'>Fall</option></select>";
-                               
-                               
-                                if(item.number>1){
-                                   string = string +"<select name = 'Semester'><br><br><option value='Spring' id ='Spring'>"+item.semester+"</option> <option value='Fall' id='Fall'>Fall</option></select>";
-                               }
-                
-                               string = string + "</td></tr>";
-			
-				 });
-				
-			},
-            
-		async: true,
-        dataType: "json",
-        error: function(req, err) {console.log(err);}
-	
-		}); 
-            
-        });
-            
-            
-            
-         
-     
-        
-    
+$core_table = array();	// put the rows as objects in an array
+
+while ( $obj = mysqli_fetch_object( $result ) ) {
+		$core_table[] = $obj;
+	}
+
+
+echo json_encode($core_table);

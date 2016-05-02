@@ -22,6 +22,8 @@ $(document).ready(function(){
                                }
                 
                                string = string + "</td></tr>";
+                               $("#viewcore").append(string);          
+
 			
 				 });
 				
