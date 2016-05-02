@@ -3,7 +3,6 @@ TO DO
 use cases:
 	student - view core
 	student - schedule courses
-	admin - view student schedule
 
 add API
 	
@@ -16,6 +15,7 @@ use cases:
 	admin - add student
 	admin - add core req
 	admin - add field of study req
+	admin - view student schedule
 	
 student log-in
 admin log-in
