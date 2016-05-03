@@ -6,7 +6,7 @@ $id = $_COOKIE['loginUserID'];
 
 $dbc = connect_to_db('gonzalyz');
 
-$query = "select p.req, c.title, s.semester, s.year
+$query = "select p.req, c.title, s.semester, s.year, r.id
 					  from class_cats as c, reqs as r, slots as s, plan as p
 					  where p.student = '$id'
                       and p.req = r.id
