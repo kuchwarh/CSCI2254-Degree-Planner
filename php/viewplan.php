@@ -1,20 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Degree Planner: View Plan</title>	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+</head>
+<body class='landing'>
+
+	<script>
+		if (document.cookie.indexOf('adminUserID') < 0) {
+			alert("Please log in.");
+			window.location.href='../adminlogin.html';
+		};
+	</script>
+	
 <?php include("dbconn.php");
 	
 	$student = $_POST['students'];
 	
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Degree Planner: View Plan</title>	
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-</head>
-<body>
+	<header id="header">
+		<h1>Degree Planner</h1>
+		<a href="../adminhome.html">Admin Home</a>
+		<a href="adminlogout.php">Log Out</a>
+	</header>
+	
+<div id=left>
 
-	<fieldset>
-	<legend>Unassigned Requirements</legend>
-		<div id='unassigned_reqs'>
+	<section class="wrapper style1">
+		<div class='tab'>
+		<h3>Unassigned Requirements</h3>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title, r.number
@@ -28,7 +44,8 @@
 									  and req is not null)
 					  and r.id not in (select req
 					  				   from aps
-					  				   where student = e.student)";
+					  				   where student = e.student)
+					  order by c.title";
 			$result = perform_query($dbc, $query);
 			$reqs = array();
 			while ($obj = mysqli_fetch_object($result)) {
@@ -40,16 +57,16 @@
 						echo $req->title . " " . $i . "<br>";
 					};
 				} else {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		</div>
-	</fieldset>
+	</section>
 	
-	<fieldset>
-	<legend>Advanced Placement Credits</legend>
-		<div id='ap_reqs'>
+	<section class='wrapper style2'>
+		<div class='tab'>
+		<h3>Advanced Placement Credits</h3>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title
@@ -57,22 +74,28 @@
 					  inner join aps as a
 					  on r.id = a.req
 	 				  where a.student = '$student'
-	 				  and r.class_cat = c.id";
+	 				  and r.class_cat = c.id
+	 				  order by c.title";
 			$result = perform_query($dbc, $query);
 			$reqs = array();
 			while ($obj = mysqli_fetch_object($result)) {
 				$reqs[] = $obj;
 			};
 			foreach ($reqs as $req) {
-				echo $req->title . "<br>";
+				echo $req->title;
 			};
 		?>
 		</div>
-	</fieldset>
+	</section>
 	
-	<fieldset>
-	<legend>First Year, Fall</legend>
-		Course 1:
+</div>
+
+<div id="right">
+	
+	<section class='wrapper style2'>
+	<div class='tab'>
+	<h3>First Year, Fall</h3>
+		<h4>Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -91,12 +114,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -115,12 +138,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -139,12 +162,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -163,12 +186,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -187,12 +210,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -211,15 +234,17 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
 	
-	<fieldset>
-	<legend>First Year, Spring</legend>
-		Course 1:
+	<section class='wrapper style1'>
+	<div class='tab'>
+	<h3>First Year, Spring</h3>
+		<h4 style="display:inline">Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -238,12 +263,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -262,12 +287,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -286,12 +311,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -310,12 +335,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -334,12 +359,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -358,15 +383,17 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
 	
-	<fieldset>
-	<legend>Second Year, Fall</legend>
-		Course 1:
+	<section class='wrapper style2'>
+	<div class='tab'>
+	<h3>Second Year, Fall</h3>
+		<h4>Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -385,12 +412,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -409,12 +436,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -433,12 +460,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -457,12 +484,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -481,12 +508,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -505,15 +532,17 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
 	
-	<fieldset>
-	<legend>Second Year, Fall</legend>
-		Course 1:
+	<section class='wrapper style1'>
+	<div class='tab'>
+	<h3>Second Year, Fall</h3>
+		<h4>Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -532,12 +561,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -556,12 +585,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -580,12 +609,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -604,12 +633,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -628,12 +657,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -652,15 +681,17 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
 	
-	<fieldset>
-	<legend>Third Year, Fall</legend>
-		Course 1:
+	<section class='wrapper style2'>
+	<div class='tab'>
+	<h3>Third Year, Fall</h3>
+		<h4>Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -679,12 +710,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -703,12 +734,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -727,12 +758,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -751,12 +782,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -775,12 +806,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -799,15 +830,17 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
 	
-	<fieldset>
-	<legend>Third Year, Spring</legend>
-		Course 1:
+	<section class='wrapper style1'>
+	<div class='tab'>
+	<h3>Third Year, Spring</h3>
+		<h4>Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -826,12 +859,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -850,12 +883,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -874,12 +907,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -898,12 +931,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -922,12 +955,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -946,15 +979,17 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
 
-	<fieldset>
-	<legend>Fourth Year, Fall</legend>
-		Course 1:
+	<section class='wrapper style2'>
+	<div class='tab'>
+	<h3>Fourth Year, Fall</h3>
+		<h4>Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -973,12 +1008,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -997,12 +1032,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1021,12 +1056,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1045,12 +1080,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1069,12 +1104,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1093,15 +1128,17 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
 	
-	<fieldset>
-	<legend>Fourth Year, Spring</legend>
-		Course 1:
+	<section class='wrapper style1'>
+	<div class='tab'>
+	<h3>Fourth Year, Spring</h3>
+		<h4>Course 1:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1120,12 +1157,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 2:
+		<h4>Course 2:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1144,12 +1181,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 3:
+		<h4>Course 3:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1168,12 +1205,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 4:
+		<h4>Course 4:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1192,12 +1229,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 5:
+		<h4>Course 5:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1216,12 +1253,12 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
 		<br>
-		Course 6:
+		<h4>Course 6:</h4>
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select class_cats.title
@@ -1240,11 +1277,14 @@
 				echo "No plan";
 			} else {
 				foreach ($reqs as $req) {
-					echo $req->title . "<br>";
+					echo $req->title;
 				};
 			};
 		?>
-	</fieldset>
+	</div>
+	</section>
+	
+</div>
 	
 </body>
 </html>

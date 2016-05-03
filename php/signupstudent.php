@@ -39,6 +39,9 @@
 	};
 	$studid = getID($username);
 	
+	$enrollcore = "insert into enroll (student, field, current) values ('$studid', 1, true)";
+	perform_query($dbc, $enrollcore);
+	
 	foreach ($slots as $slot) {
 		$insertslot = "insert into plan (slot, student) values ('$slot->id', '$studid')";
 		perform_query($dbc, $insertslot);

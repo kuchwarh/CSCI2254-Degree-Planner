@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
 <title>Degree Planner Log-In</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
 <body>
 
-	<h1>Please Log In</h1>
+	<header id="header">
+		<h1>Degree Planner</h1>
+	</header>
+
+	<section id="banner">
+		<h2>Please Log In</h2>
+	</section>
 	
-	<form id='logform' method='post' action='php/adminlogin.php'>
-		Username: <input type='text' id='username' name='username' size='15'/>
-		<div id="nameError"></div>
+	<section class="wrapper style1">
+	<div class="inner">
+		<form id='logform' method='post' action='php/adminlogin.php'>
+			<h4>Username: </h4><input type='text' id='username' name='username' size='15'/>
+			<div id="nameError"></div>
+			<br>
+			<h4>Password: </h4><input type='password' id='password' name='password' size='15'/>
+			<div id="passwordError"></div>
+			<br>
+			<input type='submit' value='Log In'>
+		</form>
 		<br>
-		Password: <input type='password' id='password' name='password' size='15'/>
-		<div id="passwordError"></div>
-		<br>
-		<input type='submit' value='Log In'>
-	</form>
-	<br>
-	<a href='studentlogin.html'>Student User?</a>
+		<a href='studentlogin.html'>Student User?</a>
+	</div>
+	</section>
 	
 	<script type="text/javascript" src="js/loginval.js"></script>
 	

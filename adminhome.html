@@ -2,96 +2,142 @@
 <html lang="en">
 <head>
 <title>Degree Planner</title>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
-<body>
+<body class="landing">
 
-	<fieldset>
-	<legend>Add Student User:</legend>
-		<form id="addform" method="post" action="php/insertstudent.php">
-			First Name:
-			<input type="text" id="firstname" name="firstname">
-			<div id="firstnameError"></div>
-			<br>
-			Last Name:
-			<input type="text" id="lastname" name="lastname">
-			<div id="lastnameError"></div>
-			<br>
-			Username: 
-			<input type="text" id="username" name="username">
-			<div id="nameError"></div>
-			<br>
-			Password:
-			<input type="password" id="password" name="password">
-			<div id="passwordError"></div>
-			<br>
-			School:
-			<select id="school" name="school">
-				<option value="">&nbsp;</option>
-				<option value="mcas">MCAS</option>
-				<option value="csom">CSOM</option>
-				<option value="lsoe">LSOE</option>
-				<option value="cson">CSON</option>
-			</select>
-			<div id="schoolError"></div>
-			<br>
-			<input type="submit" value="Add Student">
-		</form>
-	</fieldset>
+	<script>
+		if (document.cookie.indexOf('adminUserID') < 0) {
+			alert("Please log in.");
+			window.location.href='adminlogin.html';
+		};
+	</script>
+
+	<header id="header">
+		<h1>Degree Planner</h1>
+		<a href="#one">View Student Plan</a>
+		<a href="#two">Add Student</a>
+		<a href="#three">Add Core Requirement</a>
+		<a href="#four">Add Field of Study Requirement</a>
+		<a href="php/adminlogout.php">Log Out</a>
+	</header>
 	
-	<fieldset>
-	<legend>Add Core Requirement:</legend>
-		<form id="addcoreform" method="post" action="php/insertcorereq.php">
-			Requirement Title:
-			<input type="text" id="corereqtitle" name="corereqtitle">
-			<div id="corereqtitleError"></div>
-			<br>
-			Number Required:
-			<input type="text" id="corereqnumber" name="corereqnumber">
-			<div id="corereqnumberError"></div>
-			<br>
-			<input type="submit" value="Add Requirement">
-		</form>
-	</fieldset>
+	<script>
+	$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+	});
+	</script>
 	
-	<fieldset>
-	<legend>Add Field of Study Requirement:</legend>
-		<form id="addfieldform" method="post" action="php/insertfieldreq.php">
-			Field of Study:
-			<select id='fields' name='fields'>
-				<option value="">&nbsp;</option>
-			</select>
-			<div id="fieldsError"></div>
-			<br>
-			Requirement Title:
-			<input type="text" id="fieldreqtitle" name="fieldreqtitle">
-			<div id="fieldreqtitleError"></div>
-			<br>
-			Number Required:
-			<input type="text" id="fieldreqnumber" name="fieldreqnumber">
-			<div id="fieldreqnumberError"></div>
-			<br>
-			<input type="submit" value="Add Requirement">
-		</form>
-	</fieldset>
+	<section id="banner">
+		<h2>Admin Home</h2>
+	</section>
 	
-	<fieldset>
-	<legend>View Student Plan:</legend>
-		<form id="viewplan" method="post" action="php/viewplan.php">
-			Student:
-			<select id='students' name='students'>
-				<option value="">&nbsp;</option>
-			</select>
-			<div id="studentsError"></div>
-			<br>
-			<input type="submit" value="View Plan">
-		</form>
-	</fieldset>
+	<section id="one" class="wrapper style1">
+		<fieldset class="inner">
+		<h3>View Student Plan</h3>
+			<form id="viewplan" method="post" action="php/viewplan.php">
+				<h4>Student:</h4>
+				<select id='students' name='students'>
+					<option value="">&nbsp;</option>
+				</select>
+				<div id="studentsError"></div>
+				<br>
+				<input type="submit" value="View Plan">
+			</form>
+		</fieldset>
+	</section>
+
+	<section id="two" class="wrapper style2">
+		<fieldset class="inner">
+		<h3>Add Student User</h3>
+			<form id="addform" method="post" action="php/insertstudent.php">
+				<h4>First Name:</h4>
+				<input type="text" id="firstname" name="firstname">
+				<div id="firstnameError"></div>
+				<br>
+				<h4>Last Name:</h4>
+				<input type="text" id="lastname" name="lastname">
+				<div id="lastnameError"></div>
+				<br>
+				<h4>Username:</h4>
+				<input type="text" id="username" name="username">
+				<div id="nameError"></div>
+				<br>
+				<h4>Password:</h4>
+				<input type="password" id="password" name="password">
+				<div id="passwordError"></div>
+				<br>
+				<h4>School:</h4>
+				<select id="school" name="school">
+					<option value="">&nbsp;</option>
+					<option value="mcas">MCAS</option>
+					<option value="csom">CSOM</option>
+					<option value="lsoe">LSOE</option>
+					<option value="cson">CSON</option>
+				</select>
+				<div id="schoolError"></div>
+				<br>
+				<input type="submit" value="Add Student">
+			</form>
+		</fieldset>
+	</section>
+	
+	<section id="three" class="wrapper style1">
+		<fieldset class="inner">
+		<h3>Add Core Requirement</h3>
+			<form id="addcoreform" method="post" action="php/insertcorereq.php">
+				<h4>Requirement Title:</h4>
+				<input type="text" id="corereqtitle" name="corereqtitle">
+				<div id="corereqtitleError"></div>
+				<br>
+				<h4>Number Required:</h4>
+				<input type="text" id="corereqnumber" name="corereqnumber">
+				<div id="corereqnumberError"></div>
+				<br>
+				<input type="submit" value="Add Requirement">
+			</form>
+		</fieldset>
+	</section>
+	
+	<section id="four" class="wrapper style2">
+		<fieldset class="inner">
+		<h3>Add Field of Study Requirement</h3>
+			<form id="addfieldform" method="post" action="php/insertfieldreq.php">
+				<h4>Field of Study:</h4>
+				<select id='fields' name='fields'>
+					<option value="">&nbsp;</option>
+				</select>
+				<div id="fieldsError"></div>
+				<br>
+				<h4>Requirement Title:</h4>
+				<input type="text" id="fieldreqtitle" name="fieldreqtitle">
+				<div id="fieldreqtitleError"></div>
+				<br>
+				<h4>Number Required:</h4>
+				<input type="text" id="fieldreqnumber" name="fieldreqnumber">
+				<div id="fieldreqnumberError"></div>
+				<br>
+				<input type="submit" value="Add Requirement">
+			</form>
+		</fieldset>
+	</section>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/addval.js"></script>
 	<script type="text/javascript" src="js/addreq.js"></script>
 	<script type="text/javascript" src="js/showfields.js"></script>
-	<script type="text/javascript" src="js/showstudents.js"></script>
+	<script type="text/javascript" src="js/showstudents.js"></script>	
+	<script type="text/javascript" src="js/valselectstud.js"></script>
 
 </body>
 </html>

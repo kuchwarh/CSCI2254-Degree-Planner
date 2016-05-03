@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Degree Planner: Sign-Up</title>	
+<title>Degree Planner: Sign-Up</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>	
 </head>
 <body>
 
-	<h1>Sign-Up</h1>
+	<header id="header">
+		<h1>Degree Planner</h1>
+	</header>
+
+	<section id="banner">
+		<h2>Student Sign Up</h2>
+	</section>
+	
+	<section class="wrapper style1">
+	<div class="inner">
 	<form id="addform" method="post" action="php/signupstudent.php">
-		First Name:
+		<h4>First Name:</h4>
 		<input type="text" id="firstname" name="firstname">
 		<div id="firstnameError"></div>
 		<br>
-		Last Name:
+		<h4>Last Name:</h4>
 		<input type="text" id="lastname" name="lastname">
 		<div id="lastnameError"></div>
 		<br>
-		Username: 
+		<h4>Username:</h4>
 		<input type="text" id="username" name="username">
 		<div id="nameError"></div>
 		<br>
-		Password:
+		<h4>Password:</h4>
 		<input type="password" id="password" name="password">
 		<div id="passwordError"></div>
 		<br>
-		School:
+		<h4>School:</h4>
 		<select id="school" name="school">
 			<option value="">&nbsp;</option>
 			<option value="mcas">MCAS</option>
@@ -35,6 +45,8 @@
 		<br>
 		<input type="submit" value="Add Student">
 	</form>
+	</section>
+	</div>
 	
 	<script type="text/javascript" src="js/addval.js"></script>
 
