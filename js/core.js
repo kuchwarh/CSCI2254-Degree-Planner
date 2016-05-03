@@ -8,7 +8,7 @@ $(document).ready(function(){
 			     $.each(data, function(i, item) {
                      var string ="";
                                
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count[]' value='"+item.id+"'/>&nbsp;";
+                               string = string+"<tr><td>" + item.title +"</td><td><div class='4u$ 12u$(xsmall)'><input class ='boxes' id='" + item.id + "check' type='checkbox' name='count[]' value='"+item.id+"'/><label for='" + item.id + "check'>&nbsp;</label></div>";
                                
                                
                                string = string + "</td><td><select name = 'semester[]'><option value=''>&nbsp;</option><option value='fall, 1, " + item.id + "'>First Year, Fall</option><option value='spring, 1, " + item.id + "'>First Year, Spring</option><option value='fall, 2, " + item.id + "'>Second Year, Fall</option><option value='spring, 2, " + item.id + "'>Second Year, Spring</option><option value='fall, 3, " + item.id + "'>Third Year, Fall</option><option value='spring, 3, " + item.id + "'>Third Year, Spring</option><option value='fall, 4, " + item.id + "'>Fourth Year, Fall</option><option value='spring, 4, " + item.id + "'>Fourth Year, Spring</option></select>";
@@ -38,7 +38,7 @@ $(document).ready(function(){
 			     $.each(data, function(i, item) {
                      var string ="";
                                
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' checked='checked' name='count[]' value='"+item.id+"'/>&nbsp;";
+                               string = string+"<tr><td>" + item.title +"</td><td><div class='4u$ 12u$(xsmall)'><input class ='boxes' id='" + item.id + "check' type='checkbox' checked name='count[]' value='"+item.id+"'/><label for='" + item.id + "check'>&nbsp;</label></div>";
                                
                                
                                
@@ -68,7 +68,7 @@ $(document).ready(function(){
 			     $.each(data, function(i, item) {
                      var string ="";
                                
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count[]' value='"+item.id+"'/>&nbsp;";
+                               string = string+"<tr><td>" + item.title +"</td><td><div class='4u$ 12u$(xsmall)'><input class ='boxes' id='" + item.id + "check' type='checkbox' name='count[]' value='"+item.id+"'/><label for='" + item.id + "check'>&nbsp;</label></div>";
                                
                                
                             switch (item.semester) {

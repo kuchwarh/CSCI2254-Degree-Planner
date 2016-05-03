@@ -6,28 +6,32 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/getcorereqs.js"></script>
+	<script type="text/javascript" src="../js/populateaps.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
                 
-                $('#stuff').addClass('hidden');
+                $('#apadd').addClass('hidden');
+                $('#apremove').addClass('hidden');
             
             
-                  $('#addAP').click(function() {
-                $('#stuff').toggleClass('hidden');
+                $('#addAP').click(function() {
+               		$('#apadd').toggleClass('hidden');
 		  		});
 		  		
 		  		$('#cancel').click(function() {
-		  			$('#stuff').toggleClass('hidden');
+		  			$('#apadd').toggleClass('hidden');
+		  		});
+		  		
+		  		 $('#removeAP').click(function() {
+               		$('#apremove').toggleClass('hidden');
+		  		});
+		  		
+		  		$('#removecancel').click(function() {
+		  			$('#apremove').toggleClass('hidden');
 		  		});
             
             });   
   	</script>
-	<style>
-	    .hidden {
-	        display: none;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 
@@ -98,7 +102,9 @@
 			};
 		?>
 		</div>
-            <button id="addAP"> Add AP Credits </button>
+		<br>
+			<button id="removeAP">Remove AP Credits</button>
+            <button id="addAP" style="float: right; margin-right: 60px">Add AP Credits</button>
         </div>
         </section>
         
@@ -353,7 +359,7 @@
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 6:<h4><select id="s4c6" >
+                    <h4>Course 6:</h4><select id="s4c6" >
                            <option value="">&nbsp;</option>
                                 </select>
                 </div>
@@ -365,13 +371,12 @@
            </section>       
         </form> 
     </div>
-    </div>
-            
-    <span id="stuff" class="wrapper style2">
-    <div id="apadd" name="apadd">
-        <form method="POST"  action="addap.php">
+
+    <div id="apadd">            
+        <form id="addform" method="POST"  action="addap.php">
+        <section id="stuff" class="wrapper style2">
             <br>
-            <h2>Update AP Credit</h2>
+            <h2>Add AP Credit</h2>
             <br>
             <h4>AP Credit:</h4> <input type= "text" name="apcredit" id="apcredit">
             <br>
@@ -379,13 +384,34 @@
             <select id="aps" name="aps">
                 <option value="">&nbsp;</option>
             </select>
+            <div id="addError" class="error"></div>
             <br>
             <input type="button" id="cancel" value="Cancel" class="button"/>
             <input type="submit" name="formsubmit" id="formsubmit" value="Update AP Credit" style="float:right"/>
             <br>
+        </section>
         </form>
     </div>
-    </span>
+    
+    <div id="apremove">            
+        <form id="removeform" method="POST" action="removeaps.php">
+        <section id="stuff2" class="wrapper style2">
+            <br>
+            <h2>Remove AP Credit</h2>
+            <br>
+            <h4>Requirement to Remove:</h4>
+            <select id="curraps" name="curraps">
+                <option value="">&nbsp;</option>
+            </select>
+            <div id="removeError" class="error"></div>
+            <br>
+            <input type="button" id="removecancel" value="Cancel" class="button"/>
+            <input type="submit" name="removesubmit" id="removesubmit" value="Remove AP Credit" style="float:right"/>
+            <br>
+        </section>
+        </form>
+    </div>
+    
 </body>
 </html>
 

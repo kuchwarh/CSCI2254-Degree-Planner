@@ -10,8 +10,8 @@
 	};
 	
 	$dbc = connect_to_db('gonzalyz');
-	$insertap = "update plan set req = $req where student= $id and slot=1 ";
-	perform_query($dbc, $insertap);
+	$change1 = "update plan set req = $req where student= $id and slot=1 ";
+	perform_query($dbc, $change1);
 
 //-----------------------
 	if (!isset($_POST['f1c2']) || $_POST['f1c2'] == "") {
