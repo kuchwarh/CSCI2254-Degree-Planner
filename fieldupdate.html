@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="js/showfields.js"></script>
 	<script type="text/javascript" src="js/viewfieldreqs.js"></script>
 </head>
-<body class="landing">
+<body>
 
 	<script>
 		if (document.cookie.indexOf('loginUserID') < 0) {
@@ -20,35 +20,60 @@
 
 	<header id="header">
 		<h1>Degree Planner</h1>
-		<form method="post" action="php/studentlogout.php">
-			<input type="submit" value="Logout">
-		</form>
+		<a href="#one">Edit Plan</a>
+		<a href="#two">Update Fields of Study</a>
+		<a href="#three">Plan Core Requirements</a>
+		<a href="#four">View Field of Study Requirements</a>
+		<a href="php/studentlogout.php">Log Out</a>
 	</header>
 	
+	<script>
+	$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+	});
+	</script>
+	
 	<section id="banner">
-		<h2>Student Home</h2>
+		<i class="icon fa-graduation-cap"></i>
+		<h1 class="bannerh1">Student Home</h1>
+	</section>
+	
+	<section id="one" class="wrapper style1">
+		<fieldset class='inner'>
+		<h3>Edit Plan</h3>
+		<a href="php/classplanner.php"><button>Edit</button></a>
+		</fieldset>
 	</section>
 
-	<section id="one" class="wrapper style1">
+	<section id="two" class="wrapper style2">
 		<fieldset class='inner'>
 		<h3>Update Fields of Study</h3>
 			<form id="updatefields" method="post" action="php/runfieldupdate.php">
-				Major 1: 
+				<h4>Major 1:</h4>
 				<select id='major1' name='major1'>
 					<option value="">&nbsp;</option>
 				</select>
 				<br>
-				Major 2: 
+				<h4>Major 2:</h4>
 				<select id='major2' name='major2'>
 					<option value="">&nbsp;</option>
 				</select>
 				<br>
-				Minor 1: 
+				<h4>Minor 1:</h4>
 				<select id='minor1' name='minor1'>
 					<option value="">&nbsp;</option>
 				</select>
 				<br>
-				Minor 2: 
+				<h4>Minor 2:</h4>
 				<select id='minor2' name='minor2'>
 					<option value="">&nbsp;</option>
 				</select>
@@ -58,11 +83,11 @@
 		</fieldset>
 	</section>
 	
-	<section id="two" class="wrapper style2">
+	<section id="four" class="wrapper style2">
 		<fieldset class='inner'>
 		<h3>View Field of Study Requirements:</h3>
 			<form id="viewfieldreqs" method="post">
-				Field of Study:
+				<h4>Field of Study:</h4>
 				<select id='fields' name='fields'>
 					<option value="">&nbsp;</option>
 				</select>
