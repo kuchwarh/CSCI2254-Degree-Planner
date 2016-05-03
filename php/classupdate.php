@@ -25,7 +25,7 @@
 
 //-----------------------
 	if (!isset($_POST['f1c3']) || $_POST['f1c3'] == "") {
-	    $req3;
+	    $req3 = null;
 	} else {
 	    $req3 = $_POST['f1c3'];
 	};

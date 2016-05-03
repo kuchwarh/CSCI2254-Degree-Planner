@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Class Planner</title>
-	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="getcorereqs.js"></script>
+	<script type="text/javascript" src="../js/getcorereqs.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
                 
@@ -14,7 +14,11 @@
             
                   $('#addAP').click(function() {
                 $('#stuff').toggleClass('hidden');
-		  });
+		  		});
+		  		
+		  		$('#cancel').click(function() {
+		  			$('#stuff').toggleClass('hidden');
+		  		});
             
             });   
   	</script>
@@ -26,19 +30,31 @@
     </style>
 </head>
 <body>
+
+	<script>
+		if (document.cookie.indexOf('loginUserID') < 0) {
+			alert("Please log in.");
+			window.location.href='studentlogin.html';
+		};
+	</script>
+
     <?php
         include('dbconn.php');
         $student = $_COOKIE['loginUserID'];
     ?>
-    <div>
-    <h1 style="position:relative"> Course Planner </h1>
-    <br>
-    <div>
-    <div>
-        <fieldset id="leftbox" style="float: left; width: 25%; position: relative; left: 15%">
-            <p><b> Unassigned Requirements </b></p>
-            <div id="unassignedreqs" style=" overflow: scroll; border-width: 2px; border-style: solid; height: 100px; width: 300px" >
-		<?php
+    
+    <header id="header">
+		<h1>Degree Planner</h1>
+		<a href="../studenthome.html">Home</a>
+		<a href="studentlogout.php">Log Out</a>
+	</header>
+    
+    <div id="left">
+    	<section class="wrapper style1">
+		<div class='tab'>
+            <h3>Unassigned Requirements</H3>
+            <div style="overflow: scroll; height: 112px;">
+            <?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title, r.number
 					  from class_cats as c, reqs as r, enroll as e where e.student = '$student' and c.id = r.class_cat and e.field = r.field
@@ -59,13 +75,15 @@
 				};
 			};
 		?>
+			</div>
 		    </div>
-            <br>
-            <br>
-            <p><b> Requirements with AP Credit </b></p>
-            <div id="APreqs"style=" overflow: scroll; border-width: 2px; border-style: solid; height: 100px; width: 300px">
-            <div id='ap_reqs'>
-		<?php
+		</section>
+		
+		<section class="wrapper style2">
+		<div class='tab'>
+            <h3>Requirements with AP Credit<h3>
+            <div id="APreqs" style="overflow: scroll; height: 110px;">
+			<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title from class_cats as c,reqs as r
 					  inner join aps as a on r.id = a.req
@@ -80,302 +98,293 @@
 			};
 		?>
 		</div>
-            </div>
-            <br>
-            <br>
             <button id="addAP"> Add AP Credits </button>
-        </fieldset>
+        </div>
+        </section>
+        
     </div>
-    <div style="float:left; width:40%; position: relative; left: 15%">
-        <fieldset id= "mainbox">
+    <div id="right">
+        
         <form method= "POST" action= "classupdate.php">
-            <div> <!-- For Each Semester -->
-            <span id="semester"><b> First Year, Fall</b></span><br>
-                <fieldset id="courses">
-                    Course 1: <select id="f1c1" name="f1c1">
+        <section class='wrapper style2'>
+		<div class='tab'>
+        	<h3>First Year, Fall</h3>
+        		<div style="width: 90%;">
+                    <h4>Course 1:</h4>
+                    <select id="f1c1" name="f1c1">
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 2: <select id="f1c2" name="f1c2">
+                    <h4>Course 2:</h4>
+                    <select id="f1c2" name="f1c2">
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 3: <select id="f1c3" >
+                    <h4>Course 3:</h4>
+                    <select id="f1c3" >
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 4: <select id="f1c4" >
+                    <h4>Course 4:</h4>
+                    <select id="f1c4" >
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 5: <select id="f1c5" >
+                    <h4>Course 5:</h4>
+                    <select id="f1c5" >
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 6: <select id="f1c6" >
+                    <h4>Course 6:</h4>
+                    <select id="f1c6" >
                     <option value="">&nbsp;</option></select>
-            
-                </fieldset>
-            </div>
-                <br>
-                <br>
-            
-                <div> <!-- For Each Semester -->
-                <span id="semester"><b> First Year, Spring</b></span><br>
-                <fieldset id="courses">
-                
-                    <div id="reqs">    
-                        Course 1: <select id="s1c1" >
+                </div>
+        </div>
+        </section>
+
+		<section class='wrapper style1'>
+		<div class='tab'>
+                <h3>First Year, Spring</h3>                
+                    <div style='width: 90%;'>    
+                	<h4>Course 1:</h4>
+                	<select id="s1c1" >
                                     <option value="">&nbsp;</option>
                                 </select>
-            
-                    </div>
-                    Course 2: <select id="s1c2" >
+                    <br>
+                    <h4>Course 2:</h4><select id="s1c2" >
                             <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 3: <select id="s1c3" >
+                    <h4>Course 3:</h4><select id="s1c3" >
                            <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 4: <select id="s1c4" >
+                    <h4>Course 4:</h4><select id="s1c4" >
                             <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 5: <select id="s1c5" >
+                    <h4>Course 5:</h4><select id="s1c5" >
                             <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 6: <select id="s1c6" >
+                    <h4>Course 6:</h4><select id="s1c6" >
                             <option value="">&nbsp;</option>
                     </select>
-                </fieldset>
                 </div>
-                <br>
-                <br>
-            
-                <div> <!-- For Each Semester -->
-                <span id="semester"><b> Second Year, Fall</b></span><br>
-                <fieldset id="courses">
-                
-                    <div id="reqs">    
-                        Course 1: <select id="f2c1" >
-                            <option value="">&nbsp;</option>
-                                </select>
-                    </div>
-                    Course 2: <select id="f2c2" >
+			</div>
+			</section>
+			
+		<section class='wrapper style2'>
+		<div class='tab'>
+                <h3>Second Year, Fall</h3>
+                <div style='width: 90%'>    
+                    <h4>Course 1:</h4><select id="f2c1" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 3: <select id="f2c3" >
+                    <h4>Course 2:</h4><select id="f2c2" >
+                            <option value="">&nbsp;</option>
+                                </select>
+                    <br>
+                    <h4>Course 3:</h4><select id="f2c3" >
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 4: <select id="f2c4" >
+                    <h4>Course 4:</h4><select id="f2c4" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 5: <select id="f2c5" >
+                    <h4>Course 5:</h4><select id="f2c5" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 6: <select id="f2c6" >
+                    <h4>Course 6:</h4><select id="f2c6" >
                             <option value="">&nbsp;</option>
                                 </select>
-                </fieldset>
                 </div>
-                <br>
-                <br>
-            
-                <div> <!-- For Each Semester -->
-                <span id="semester"><b> Second Year, Spring</b></span><br>
-                <fieldset id="courses">
-                
-                    <div id="reqs">    
-                        Course 1: <select id="s2c1" >
+        </div>
+        </section>        
+			
+		<section class='wrapper style1'>
+		<div class='tab'>
+				<h3>Second Year, Spring</h3>
+				<div style="width: 90%">
+					<h4>Course 1:</h4><select id="s2c1" >
+						   <option value="">&nbsp;</option>
+								</select>
+					<br>
+					<h4>Course 2:</h4><select id="s2c2" >
+							<option value="">&nbsp;</option>
+								</select>
+					<br>
+					<h4>Course 3:</h4><select id="s2c3" >
+							<option value="">&nbsp;</option>
+								</select>
+					<br>
+					<h4>Course 4:</h4><select id="s2c4" >
+							<option value="">&nbsp;</option>
+								</select>
+					<br>
+					<h4>Course 5:</h4><select id="s2c5" >
+							<option value="">&nbsp;</option>
+								</select>
+					<br>
+					<h4>Course 6:</h4><select id="s2c6" >
+							<option value="">&nbsp;</option>
+								</select>
+				</div>
+		</div>
+		</section>
+        
+        <section class='wrapper style2'>
+		<div class='tab'>
+                <h3>Third Year, Fall</h3>
+                <div style="width: 90%">    
+                	<h4>Course 1:</h4><select id="f3c1" >
                            <option value="">&nbsp;</option>
                                 </select>
-                    </div>
-                    Course 2: <select id="s2c2" >
+                    <br>
+                    <h4>Course 2:</h4><select id="f3c2" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 3: <select id="s2c3" >
+                    <h4>Course 3:</h4><select id="f3c3" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 4: <select id="s2c4" >
+                    <h4>Course 4:</h4><select id="f3c4" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 5: <select id="s2c5" >
+                    <h4>Course 5:</h4><select id="f3c5" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 6: <select id="s2c6" >
+                    <h4>Course 6:</h4><select id="f3c6" >
                             <option value="">&nbsp;</option>
                                 </select>
-                </fieldset>
                 </div>
-                <br>
-                <br>
+        </div>
+        </section>
             
-                <div> <!-- For Each Semester -->
-                <span id="semester"><b> Third Year, Fall</b></span><br>
-                <fieldset id="courses">
-                
-                    <div id="reqs">    
-                        Course 1: <select id="f3c1" >
+        <section class='wrapper style1'>
+		<div class='tab'>
+                <h3>Third Year, Spring</h3>
+                <div style="width: 90%;">    
+                    <h4>Course 1:</h4><select id="s3c1" >
                            <option value="">&nbsp;</option>
                                 </select>
-                    </div>
-                    Course 2: <select id="f3c2" >
+                    <br>
+                    <h4>Course 2:</h4><select id="s3c2" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 3: <select id="f3c3" >
+                    <h4>Course 3:</h4><select id="s3c3" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 4: <select id="f3c4" >
-                            <option value="">&nbsp;</option>
+                    <h4>Course 4:</h4><select id="s3c4" >
+                           <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 5: <select id="f3c5" >
-                            <option value="">&nbsp;</option>
+                    <h4>Course 5:</h4><select id="s3c5" >
+                           <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 6: <select id="f3c6" >
-                            <option value="">&nbsp;</option>
+                    <h4>Course 6:</h4><select id="s3c6" >
+                           <option value="">&nbsp;</option>
                                 </select>
-                </fieldset>
                 </div>
-                <br>
-                <br> 
+        </div>
+        </section>
             
-                <div> <!-- For Each Semester -->
-                <span id="semester"><b> Third Year, Spring</b></span><br>
-                <fieldset id="courses">
-                
-                    <div id="reqs">    
-                        Course 1: <select id="s3c1" >
-                           <option value="">&nbsp;</option>
-                                </select>
-                    </div>
-                    Course 2: <select id="s3c2" >
+    	<section class='wrapper style2'>
+		<div class='tab'>
+                <h3>Fourth Year, Fall</h3>
+                <div style="width: 90%">    
+                    <h4>Course 1:</h4><select id="f4c1" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 3: <select id="s3c3" >
+                    <h4>Course 2:</h4><select id="f4c2" >
+                           <option value="">&nbsp;</option>
+                                </select>
+                    <br>
+                    <h4>Course 3:</h4><select id="f4c3" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 4: <select id="s3c4" >
+                    <h4>Course 4:</h4><select id="f4c4" >
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 5: <select id="s3c5" >
-                           <option value="">&nbsp;</option>
+                    <h4>Course 5:</h4><select id="f4c5" >
+                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 6: <select id="s3c6" >
-                           <option value="">&nbsp;</option>
+                    <h4>Course 6:</h4><select id="f4c6" >
+                            <option value="">&nbsp;</option>
                                 </select>
-                </fieldset>
                 </div>
-                <br>
-                <br>
-            
-                <div> <!-- For Each Semester -->
-                <span id="semester"><b> Fourth Year, Fall</b></span><br>
-                <fieldset id="courses">
-                
-                    <div id="reqs">    
-                        Course 1: <select id="f4c1" >
-                            <option value="">&nbsp;</option>
-                                </select>
-                    </div>
-                    Course 2: <select id="f4c2" >
-                           <option value="">&nbsp;</option>
-                                </select>
-                    <br>
-                    Course 3: <select id="f4c3" >
-                            <option value="">&nbsp;</option>
-                                </select>
-                    <br>
-                    Course 4: <select id="f4c4" >
-                           <option value="">&nbsp;</option>
-                                </select>
-                    <br>
-                    Course 5: <select id="f4c5" >
-                            <option value="">&nbsp;</option>
-                                </select>
-                    <br>
-                    Course 6: <select id="f4c6" >
-                            <option value="">&nbsp;</option>
-                                </select>
-                </fieldset>
-                </div>
-                <br>
-                <br>
-            
-                <div> <!-- For Each Semester -->
-                <span id="semester"><b> Fourth Year, Spring</b></span><br>
-                <fieldset id="courses">
-                
-                    <div id="reqs">    
-                        Course 1: <select id="s4c1" >
+        </div>
+        </section>
+        
+        <section class='wrapper style1'>
+		<div class='tab'>
+                <h3>Fourth Year, Spring</h3>
+                <div style='width: 90%;'>    
+                   <h4>Course 1:</h4><select id="s4c1" >
                           <option value="">&nbsp;</option>
                                 </select>
-                    </div>
-                    Course 2: <select id="s4c2" >
+                	<br>
+                    <h4>Course 2:</h4><select id="s4c2" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 3: <select id="s4c3" >
+                    <h4>Course 3:</h4><select id="s4c3" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 4: <select id="s4c4" >
+                    <h4>Course 4:</h4><select id="s4c4" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 5: <select id="s4c5" >
+                    <h4>Course 5:</h4><select id="s4c5" >
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    Course 6: <select id="s4c6" >
+                    <h4>Course 6:<h4><select id="s4c6" >
                            <option value="">&nbsp;</option>
                                 </select>
-                </fieldset>
                 </div>
-                <br>
-                <br>
-            <input type= "submit" name="update" id="update" value="Update Course Plan">        
+           </div>
+           </section>
+           <section class="wrapper style2 special">
+            <input type= "submit" name="update" id="update" value="Update Course Plan"> 
+            <br>
+           </section>       
         </form> 
-        </fieldset>
     </div>
     </div>
             
-    <span id="stuff" style="position: absolute; top: 300px; right: 550px; background-color: orange">
-    <fieldset id="apadd" name="apadd" style="border:0px">
+    <span id="stuff" class="wrapper style2">
+    <div id="apadd" name="apadd">
         <form method="POST"  action="addap.php">
+            <br>
             <h2>Update AP Credit</h2>
             <br>
-            <b>AP Credit:<b> <input type= "text" name="apcredit" id="apcredit">
+            <h4>AP Credit:</h4> <input type= "text" name="apcredit" id="apcredit">
             <br>
-            <b>Requirement Fulfilled:<b>
+            <h4>Requirement Fulfilled:</h4>
             <select id="aps" name="aps">
                 <option value="">&nbsp;</option>
             </select>
             <br>
-            <br>
-            <br>
-            <input type="submit" name="formsubmit" id="formsubmit" value="Update AP Credit"  />
-            <br>
+            <input type="button" id="cancel" value="Cancel" class="button"/>
+            <input type="submit" name="formsubmit" id="formsubmit" value="Update AP Credit" style="float:right"/>
             <br>
         </form>
-    </fieldset>
+    </div>
     </span>
 </body>
 </html>

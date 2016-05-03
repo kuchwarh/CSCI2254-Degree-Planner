@@ -22,7 +22,7 @@
 
 	<header id="header">
 		<h1>Degree Planner</h1>
-		<a href="../adminhome.html">Admin Home</a>
+		<a href="../adminhome.html">Home</a>
 		<a href="adminlogout.php">Log Out</a>
 	</header>
 	
@@ -31,6 +31,7 @@
 	<section class="wrapper style1">
 		<div class='tab'>
 		<h3>Unassigned Requirements</h3>
+		<div style="overflow: scroll; height: 160px;">
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title, r.number
@@ -57,16 +58,18 @@
 						echo $req->title . " " . $i . "<br>";
 					};
 				} else {
-					echo $req->title;
+					echo $req->title . "<br>";
 				};
 			};
 		?>
+		</div>
 		</div>
 	</section>
 	
 	<section class='wrapper style2'>
 		<div class='tab'>
 		<h3>Advanced Placement Credits</h3>
+		<div style="overflow: scroll; height: 160px;">
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title
@@ -82,9 +85,10 @@
 				$reqs[] = $obj;
 			};
 			foreach ($reqs as $req) {
-				echo $req->title;
+				echo $req->title . "<br>";
 			};
 		?>
+		</div>
 		</div>
 	</section>
 	
