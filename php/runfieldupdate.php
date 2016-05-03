@@ -28,6 +28,7 @@
 	while ($obj = mysqli_fetch_object($result)) {
 		$fields[] = $obj;
 	};
+
 	foreach ($fields as $field) {
 		$setfalse = "update enroll set current = false where field = '$field->field' 
 					 and student = '$id' and field not in (1)";
@@ -62,8 +63,10 @@
 		if (!$found) {
 			$insert = "insert into enroll (field, student, current) values ('$field->id', '$id', true)";
 			perform_query($dbc, $insert);
+			break;
 			};
 		};
 	};
 	
+	disconnect_from_db($dbc, $result);
 	header("Location: ../studenthome.html");

@@ -34,7 +34,7 @@
 	<script>
 		if (document.cookie.indexOf('loginUserID') < 0) {
 			alert("Please log in.");
-			window.location.href='studentlogin.html';
+			window.location.href='../studentlogin.html';
 		};
 	</script>
 

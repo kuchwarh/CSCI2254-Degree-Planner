@@ -11,6 +11,13 @@
 	<script type="text/javascript" src="js/viewfieldreqs.js"></script>
 </head>
 <body>
+
+	<script>
+		if (document.cookie.indexOf('loginUserID') < 0) {
+			alert("Please log in.");
+			window.location.href='studentlogin.html';
+		};
+	</script>
     
     <header id="header">
 		<h1>Degree Planner</h1>
@@ -44,7 +51,7 @@
 	<section id="one" class="wrapper style1">
 		<fieldset class='inner'>
 		<h3>Edit Plan</h3>
-		<a href="php/classplanner.php"><button>Edit</button></a>
+		<a href="php/classplanner.php"><button class="button">Edit</button></a>
 		</fieldset>
 	</section>
 
@@ -79,7 +86,7 @@
       
     <section id="three" class="wrapper style1">
       <fieldset class="inner">
-        <legend id= "formleg"> View Core </legend>
+        <h3 id= "formleg">View Core </h3>
         <form method="post" id="att_form" onsubmit="validate()" action="core.php">
             <br>
             <table id="viewcore"><tr><th>Req</th><th>AP</th><th>Semester</th></tr>
