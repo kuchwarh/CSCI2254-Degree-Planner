@@ -1,11 +1,20 @@
 <?php include('dbconn.php');
 
-// 	$id = $_COOKIE['loginUserID'];
+ 	$id = $_COOKIE['loginUserID'];
 
 	$dbc = connect_to_db('gonzalyz');
-	$query = "select title from class_cats where id in (select reqs.class_cat from reqs inner 
-	        join fields_of_study on reqs.field = fields_of_study.id where fields_of_study.type = 'core' and school 
-	        is null)";
+	$query = "select c.title, r.id
+					  from class_cats as c, reqs as r, enroll as e
+					  where e.student = '$id'
+					  and c.id = r.class_cat
+					  and e.field = r.field
+					  and r.id not in (select req 
+									  from plan
+									  where student = e.student
+									  and req is not null)
+					  and r.id not in (select req
+					  				   from aps
+					  				   where student = e.student)";
 	
 	$result = perform_query($dbc, $query);
 	if ( mysqli_num_rows( $result ) == 0 ) {
@@ -17,4 +26,7 @@
 	while ($obj = mysqli_fetch_object($result)) {
 		$fields[] = $obj;
 	}
+	echo json_encode($fields);
 	disconnect_from_db($dbc, $result);
+	
+	?>

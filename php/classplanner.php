@@ -6,12 +6,31 @@
 	<link rel="stylesheet" type="text/css" href="">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="getcorereqs.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+                
+                $('#stuff').addClass('hidden');
+            
+            
+                  $('#addAP').click(function() {
+                $('#stuff').toggleClass('hidden');
+		  });
+            
+            });   
+  	</script>
+	<style>
+	    .hidden {
+	        display: none;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <?php
         include('dbconn.php');
         $student = $_COOKIE['loginUserID'];
     ?>
+    <div>
     <h1 style="position:relative"> Course Planner </h1>
     <br>
     <div>
@@ -69,15 +88,15 @@
     </div>
     <div style="float:left; width:40%; position: relative; left: 15%">
         <fieldset id= "mainbox">
-        <form method= "POST" action= "getcorereqs.php">
+        <form method= "POST" action= "classupdate.php">
             <div> <!-- For Each Semester -->
             <span id="semester"><b> First Year, Fall</b></span><br>
                 <fieldset id="courses">
-                    Course 1: <select id="f1c1">
+                    Course 1: <select id="f1c1" name="f1c1">
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    Course 2: <select id="f1c2" >
+                    Course 2: <select id="f1c2" name="f1c2">
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
@@ -337,7 +356,27 @@
         </fieldset>
     </div>
     </div>
-    
+            
+    <span id="stuff" style="position: absolute; top: 300px; right: 550px; background-color: orange">
+    <fieldset id="apadd" name="apadd" style="border:0px">
+        <form method="POST"  action="addap.php">
+            <h2>Update AP Credit</h2>
+            <br>
+            <b>AP Credit:<b> <input type= "text" name="apcredit" id="apcredit">
+            <br>
+            <b>Requirement Fulfilled:<b>
+            <select id="aps" name="aps">
+                <option value="">&nbsp;</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <input type="submit" name="formsubmit" id="formsubmit" value="Update AP Credit"  />
+            <br>
+            <br>
+        </form>
+    </fieldset>
+    </span>
 </body>
 </html>
 

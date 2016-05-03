@@ -2,6 +2,7 @@
 
 	$id = $_COOKIE['loginUserID'];
 	$req = $_POST['aps'];
+	echo $req;
 	
 	$dbc = connect_to_db('gonzalyz');
 	$insertap = "insert into aps (student, req) values ('$id', '$req')";

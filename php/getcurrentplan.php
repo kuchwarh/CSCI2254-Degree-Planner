@@ -5,12 +5,10 @@
 
 	$dbc = connect_to_db('gonzalyz');
 	$query = "select c.title, r.id from class_cats as c, reqs as r, plan as p
-	          where c.id = r.class_cat and p.student = '$id' and p.req = r.id and p.slot = '$slot'";
+	          where c.id = r.class_cat and p.student = '$id' and p.req = r.id and p.slot = '$slot'
+	          and p.req is not null";
 	
 	$result = perform_query($dbc, $query);
-	if ( mysqli_num_rows( $result ) == 0 ) {
-		die("bad query $query");
-	};
 	
 	
 	$fields = array();
