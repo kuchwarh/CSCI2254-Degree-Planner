@@ -1,20 +1,18 @@
-// $(document).ready(function() {
-// 	
-// 	$.ajax({
-// 		url: "php/getrequirements.php",
-// 		success: function(data) {
-// 			
-// 			if (data.length > 1) {
-// 				$("reqsneeded").append($("<option></option>").val(data[0].id).html(data[0].name));
-// 				
-// 				} 
-// 				};
-// 	
-// 			},
-// 		async: true,
-// 		dataType: "json"
-// 
-// )};
+$(document).ready(function() {
 
-//use $fields (the array) from getrequirements.php
+	$.ajax({
+		url: "getrequirements.php",
+		success: function(data) {
+			$.each(data, function(i, item) {
+				var id = item.id;
+				var name = item.name;
+				$("#f1c1").append($("<option></option>").val(id).html(name));
+				})		
+			},
+		async: true,
+		dataType: "json"
+	
+	});	
+	
 
+});
