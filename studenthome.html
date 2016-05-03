@@ -2,19 +2,83 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Student_Homepage</title>
-	<link rel="stylesheet" type="text/css" href="css/studenthome.css" />
+	<title>Degree Planner: Home</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<script type="text/javascript" src="js/majorupdate.js"></script>
+	<script type="text/javascript" src="js/minorupdate.js"></script>
+	<script type="text/javascript" src="js/showfields.js"></script>
+	<script type="text/javascript" src="js/viewfieldreqs.js"></script>
+</head>
+<body>
+    
+    <header id="header">
+		<h1>Degree Planner</h1>
+		<a href="#one">Edit Plan</a>
+		<a href="#two">Update Fields of Study</a>
+		<a href="#three">Plan Core Requirements</a>
+		<a href="#four">View Field of Study Requirements</a>
+		<a href="php/studentlogout.php">Log Out</a>
+	</header>
+	
+	<script>
+	$('a[href^="#"]').on('click', function(event) {
 
-  </head>
-  <body>
-    <h1>Student_Home</h1>
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+	});
+	</script>
+	
+	<section id="banner">
+		<i class="icon fa-graduation-cap">&nbsp;</i>
+		<h1 class="bannerh1">Student Home</h1>
+	</section>
+	
+	<section id="one" class="wrapper style1">
+		<fieldset class='inner'>
+		<h3>Edit Plan</h3>
+		<a href="php/classplanner.php"><button>Edit</button></a>
+		</fieldset>
+	</section>
+
+	<section id="two" class="wrapper style2">
+		<fieldset class='inner'>
+		<h3>Update Fields of Study</h3>
+			<form id="updatefields" method="post" action="php/runfieldupdate.php">
+				<h4>Major 1:</h4>
+				<select id='major1' name='major1'>
+					<option value="">&nbsp;</option>
+				</select>
+				<br>
+				<h4>Major 2:</h4>
+				<select id='major2' name='major2'>
+					<option value="">&nbsp;</option>
+				</select>
+				<br>
+				<h4>Minor 1:</h4>
+				<select id='minor1' name='minor1'>
+					<option value="">&nbsp;</option>
+				</select>
+				<br>
+				<h4>Minor 2:</h4>
+				<select id='minor2' name='minor2'>
+					<option value="">&nbsp;</option>
+				</select>
+				<br>
+				<input type='submit' value='Update'>
+			</form>
+		</fieldset>
+	</section>
       
-     
-      
-      
-      <fieldset id="coreform">
+    <section id="three" class="wrapper style1">
+      <fieldset class="inner">
         <legend id= "formleg"> View Core </legend>
         <form method="post" id="att_form" onsubmit="validate()" action="core.php">
             <br>
@@ -24,11 +88,25 @@
             <input type="submit" id ="save" class ="save" value="Save">  
         </form>
       </fieldset>
+    </section>
+    
+    <section id="four" class="wrapper style2">
+		<fieldset class='inner'>
+		<h3>View Field of Study Requirements:</h3>
+			<form id="viewfieldreqs" method="post">
+				<h4>Field of Study:</h4>
+				<select id='fields' name='fields'>
+					<option value="">&nbsp;</option>
+				</select>
+				<br>
+				<input type='button' id='showreqs' name='showreqs' value='View Requirements'>
+			</form>
+			<table id='reqs'>
+			</table>
+		</fieldset>
+	</section>
       
 <script type="text/javascript" src="js/core.js"></script>
-      
-         
-  	
 
-  </body>
+</body>
 </html>

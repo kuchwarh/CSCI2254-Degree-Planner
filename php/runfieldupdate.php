@@ -66,4 +66,4 @@
 		};
 	};
 	
-	header("Location: ../fieldupdate.html");
+	header("Location: ../studenthome.html");
