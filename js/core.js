@@ -93,9 +93,11 @@ $(document).ready(function(){
                                     case "2":
                                     string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2' selected>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                         break;
-                                    case "3":   
+                                    case "3": 
+                                    string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3' selected>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                         break;
                                     case "4":
+                                    string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4' selected>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                         break;
                                 }
                                     break;
@@ -103,12 +105,16 @@ $(document).ready(function(){
                                     
                             switch (item.year) {
                                     case "1":
+                                    string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1' selected>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                         break;
                                     case "2":
+                                    string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2' selected>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                         break;
                                     case "3":
+                                     string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3' selected>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                         break;
                                     case "4":
+                                    string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'selected>Fourth Year, Spring</option></select>";
                                         break;
                                 }
                                     break;
