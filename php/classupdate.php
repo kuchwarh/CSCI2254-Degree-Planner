@@ -29,15 +29,8 @@
 
 //-----------------------
 	if (!isset($_POST['f1c3']) || $_POST['f1c3'] == "") {
-<<<<<<< Updated upstream
 	    $req3 = null;
-=======
-<<<<<<< HEAD
-	    $req3=null;
-=======
-	    $req3 = null;
->>>>>>> origin/master
->>>>>>> Stashed changes
+
 	} else {
 	    $req3 = $_POST['f1c3'];
 	};
