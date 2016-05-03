@@ -8,18 +8,13 @@ $(document).ready(function(){
 			     $.each(data, function(i, item) {
                      var string ="";
                                
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
+                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count[]' value='"+item.id+"'/>&nbsp;";
                                
-                               if(item.number>1){
-                                   string = string +"<input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
-                               }
                                
                                string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                
                                
-                                if(item.number>1){
-                                   string = string +"<select name = 'Semester'><br><br><option value='Spring' id ='Spring'>"+item.semester+"</option> <option value='Fall' id='Fall'>Fall</option></select>";
-                               }
+                       
                 
                                string = string + "</td></tr>";
                                $("#viewcore").append(string);          
@@ -43,17 +38,13 @@ $(document).ready(function(){
 			     $.each(data, function(i, item) {
                      var string ="";
                                
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' checked='checked' name='count' value='"+item.title+"'/>&nbsp;";
+                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' checked='checked' name='count[]' value='"+item.id+"'/>&nbsp;";
                                
-                               if(item.number>1){
-                                   string = string +"<input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
-                               }
+                               
                                
                                string = string + "</td><td><select name = 'Semester'><option value=''>&nbsp;</option><option value='Fall1'>First Year, Fall</option><option value='Spring1'>First Year, Spring</option><option value='Fall2'>Second Year, Fall</option><option value='Spring2'>Second Year, Spring</option><option value='Fall3'>Third Year, Fall</option><option value='Spring3'>Third Year, Spring</option><option value='Fall4'>Fourth Year, Fall</option><option value='Spring4'>Fourth Year, Spring</option></select>";
                                
-                                if(item.number>1){
-                                   string = string +"<select name = 'Semester'><br><br><option value='Spring' id ='Spring'>"+item.semester+"</option> <option value='Fall' id='Fall'>Fall</option></select>";
-                               }
+                                
                 
                                string = string + "</td></tr>";
                                $("#viewcore").append(string);          
@@ -77,13 +68,9 @@ $(document).ready(function(){
 			     $.each(data, function(i, item) {
                      var string ="";
                                
-                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
+                               string = string+"<tr><td>" + item.title +"</td><td><input class ='boxes' type='checkbox' name='count[]' value='"+item.id+"'/>&nbsp;";
                                
-                               if(item.number>1){
-                                   string = string +"<input class ='boxes' type='checkbox' name='count' value='"+item.title+"'/>&nbsp;";
-                               }
-                 
-                     
+                               
                             switch (item.semester) {
                                     case "fall":        
                             switch (item.year) {
@@ -121,10 +108,7 @@ $(document).ready(function(){
                                               }
                                     
                                
-                               
-                                if(item.number>1){
-                                   string = string +"<select name = 'Semester'><br><br><option value='Spring' id ='Spring'>"+item.semester+"</option> <option value='Fall' id='Fall'>Fall</option></select>";
-                               }
+                             
                                
                              
                 
@@ -140,7 +124,12 @@ $(document).ready(function(){
         dataType: "json",
         error: function(req, err) {console.log(err);}
 	
-		}); 
+		});
+    
+     id_array = Array();
+     var values = $('input:checkbox:checked').map(function () {
+                     id_array.push(this.value);
+                    })
             
         });
             

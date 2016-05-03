@@ -9,7 +9,7 @@ $dbc = connect_to_db('gonzalyz');
 //$query = "SELECT class_cats.title, reqs.number FROM `class_cats`, `reqs` WHERE reqs.class_cat = class_cats.id and reqs.field=1;";
 
 
-$query = "select c.title, r.number
+$query = "select c.title, r.number, r.id
 					  from class_cats as c, reqs as r, enroll as e
 					  where e.student = '$id'
 					  and c.id = r.class_cat
