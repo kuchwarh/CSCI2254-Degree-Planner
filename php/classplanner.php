@@ -52,7 +52,7 @@
     <div id="left">
     	<section class="wrapper style1">
 		<div class='tab'>
-            <h3>Unassigned Requirements</H3>
+            <h3>Unassigned Requirements</h3>
             <div style="overflow: scroll; height: 112px;">
             <?php
 			$dbc = connect_to_db('gonzalyz');
@@ -81,7 +81,7 @@
 		
 		<section class="wrapper style2">
 		<div class='tab'>
-            <h3>Requirements with AP Credit<h3>
+            <h3>Requirements with AP Credit</h3>
             <div id="APreqs" style="overflow: scroll; height: 110px;">
 			<?php
 			$dbc = connect_to_db('gonzalyz');
