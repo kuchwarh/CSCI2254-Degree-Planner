@@ -2,14 +2,14 @@
 CSCI2254-Project
 
 Rahul Rakhit
-
 Meagan Gonzalez
-
 Helene Kuchwara
+
+URL: http://cscilab.bc.edu/~gonzalyz/degree_planner/index.html
 
 Project documents can be found in the [Wiki](https://github.com/kuchwarh/CSCI2254-Project/wiki)!
 
-# Can you please rename the repo to something more descriptive?
+
 RUBRIC - For Data Documentation
 CRITERIA:
 Create SQL Complete for all tables. Table names and field names well
