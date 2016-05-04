@@ -1,5 +1,13 @@
 <?php include("dbconn.php");
-$email;$comment;$captcha;
+
+if (!isset($_POST['username']) or !isset($_POST['password'])
+	or (0 == checklogin($_POST['username'], $_POST['password']))) {
+		echo "<script>alert('Incorrect username or password.');
+		window.location.href='../studentlogin.html';
+		</script>";
+		
+} else {
+	$email;$comment;$captcha;
         if(isset($_POST['email'])){
           $email=$_POST['email'];
         }if(isset($_POST['comment'])){
@@ -17,22 +25,15 @@ $email;$comment;$captcha;
         $responseKeys = json_decode($response,true);
         if(intval($responseKeys["success"]) !== 1) {
           echo '<h2>You are spammer ! Get the @$%K out</h2>';
-        } else {
-          echo '<h2>Thanks for posting comment.</h2>';
-        }
+        } 
 
-if (!isset($_POST['username']) or !isset($_POST['password'])
-	or (0 == checklogin($_POST['username'], $_POST['password']))) {
-		echo "<script>alert('Incorrect username or password.');
-		window.location.href='../studentlogin.html';
-		</script>";
-		
-} else {
-	
+        else {
+         
+    
 	setcookie('loginUserID', getID($_POST['username']), time() + 60*60*24*30, '/');
 		
 	header("Location: ../studenthome.html");
-		
+        }
 };
 
 function checklogin($name, $password) {
