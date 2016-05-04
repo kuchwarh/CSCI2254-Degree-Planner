@@ -16,15 +16,17 @@ if (!isset($_POST['username']) or !isset($_POST['password'])
           $captcha=$_POST['g-recaptcha-response'];
         }
         if(!$captcha){
-          echo '<h2>Please check the the captcha form.</h2>';
-          exit;
+       echo "<script> alert('please check recaptcha');
+window.location.href='http://cscilab.bc.edu/~kuchwarh/CSCI2254-Project/studentlogin.html';</script>";
+             //header("Location: ../studentlogin.html");
         }
         $secretKey = "6Lf-AR8TAAAAAMVFeMJkqlpeN4jDXsgmF1BLsiAU";
         $ip = $_SERVER['REMOTE_ADDR'];
         $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
         $responseKeys = json_decode($response,true);
         if(intval($responseKeys["success"]) !== 1) {
-          echo '<h2>You are spammer ! Get the @$%K out</h2>';
+       //   echo '<h2>You are spammer ! Get the @$%K out</h2>';
+               header("Location: ../studentlogin.html");
         } 
 
         else {
