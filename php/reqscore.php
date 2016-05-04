@@ -10,6 +10,7 @@ $query = "select p.req, c.title, s.semester, s.year, r.id
 					  from class_cats as c, reqs as r, slots as s, plan as p
 					  where p.student = '$id'
                       and p.req = r.id
+                      and r.field = 1
                       and r.class_cat = c.id
                       and p.slot = s.id";
 
