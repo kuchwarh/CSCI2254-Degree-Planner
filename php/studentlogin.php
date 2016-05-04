@@ -12,7 +12,7 @@ if (!isset($_POST['username']) or !isset($_POST['password'])
         	$captcha=$_POST['g-recaptcha-response'];
         };
         if(!$captcha){
-        	echo "<script> alert('Please check recaptcha.');
+        	echo "<script> alert('Keep account safe: Verify you are a human before login.');
 			window.location.href='../studentlogin.html';</script>";
         };
         $secretKey = "6Lf-AR8TAAAAAMVFeMJkqlpeN4jDXsgmF1BLsiAU";
@@ -22,14 +22,9 @@ if (!isset($_POST['username']) or !isset($_POST['password'])
         if(intval($responseKeys["success"]) !== 1) {
      		echo "<script> alert('Spammer detected.');
 			window.location.href='../studentlogin.html';</script>";
-        } 
-
-        else {
-         
-    
-	setcookie('loginUserID', getID($_POST['username']), time() + 60*60*24*30, '/');
-		
-	header("Location: ../studenthome.html");
+        } else {
+			setcookie('loginUserID', getID($_POST['username']), time() + 60*60*24*30, '/');
+			header("Location: ../studenthome.html");
         }
 };
 
