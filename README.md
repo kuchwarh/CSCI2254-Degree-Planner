@@ -1,8 +1,8 @@
 # Degree Planner
 CSCI2254-Project
 
-Rahul Rakhit
-Meagan Gonzalez
+Rahul Rakhit,
+Meagan Gonzalez,
 Helene Kuchwara
 
 URL: http://cscilab.bc.edu/~gonzalyz/degree_planner/index.html
