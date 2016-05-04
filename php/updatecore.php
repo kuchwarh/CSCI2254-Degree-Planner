@@ -80,6 +80,7 @@
 			};
 		};
 
+<<<<<<< Updated upstream
 		$allplanned = "select req from plan
 					   where student = '$id'
 					   and req is not null";
@@ -154,3 +155,15 @@
 	};
    
    	header("Location: ../studenthome.html#three");
+=======
+
+
+ if(!empty($_POST['count'])){
+     foreach($_POST['count'] as $id){
+        echo $id;
+           echo "<br>";
+           echo "<br>";
+           echo "<br>";
+     }
+   }
+>>>>>>> Stashed changes
