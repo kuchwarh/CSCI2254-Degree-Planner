@@ -7,26 +7,21 @@ if (!isset($_POST['username']) or !isset($_POST['password'])
 		</script>";
 		
 } else {
-	$email;$comment;$captcha;
-        if(isset($_POST['email'])){
-          $email=$_POST['email'];
-        }if(isset($_POST['comment'])){
-          $email=$_POST['comment'];
-        }if(isset($_POST['g-recaptcha-response'])){
-          $captcha=$_POST['g-recaptcha-response'];
-        }
+		$captcha;
+        if(isset($_POST['g-recaptcha-response'])){
+        	$captcha=$_POST['g-recaptcha-response'];
+        };
         if(!$captcha){
-       echo "<script> alert('please check recaptcha');
-window.location.href='http://cscilab.bc.edu/~kuchwarh/CSCI2254-Project/studentlogin.html';</script>";
-             //header("Location: ../studentlogin.html");
-        }
+        	echo "<script> alert('Please check recaptcha.');
+			window.location.href='../studentlogin.html';</script>";
+        };
         $secretKey = "6Lf-AR8TAAAAAMVFeMJkqlpeN4jDXsgmF1BLsiAU";
         $ip = $_SERVER['REMOTE_ADDR'];
         $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
         $responseKeys = json_decode($response,true);
         if(intval($responseKeys["success"]) !== 1) {
-       //   echo '<h2>You are spammer ! Get the @$%K out</h2>';
-               header("Location: ../studentlogin.html");
+     		echo "<script> alert('Spammer detected.');
+			window.location.href='../studentlogin.html';</script>";
         } 
 
         else {
