@@ -127,22 +127,22 @@
                     </select>
                     <br>
                     <h4>Course 3:</h4>
-                    <select id="f1c3" >
+                    <select id="f1c3" name="f1c3">
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
                     <h4>Course 4:</h4>
-                    <select id="f1c4" >
+                    <select id="f1c4" name="f1c4">
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
                     <h4>Course 5:</h4>
-                    <select id="f1c5" >
+                    <select id="f1c5" name="f1c5">
                     <option value="">&nbsp;</option>
                     </select>
                     <br>
                     <h4>Course 6:</h4>
-                    <select id="f1c6" >
+                    <select id="f1c6" name="f1c6">
                     <option value="">&nbsp;</option></select>
                 </div>
         </div>
@@ -153,27 +153,27 @@
                 <h3>First Year, Spring</h3>                
                     <div style='width: 90%;'>    
                 	<h4>Course 1:</h4>
-                	<select id="s1c1" >
+                	<select id="s1c1" name="s1c1">
                                     <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 2:</h4><select id="s1c2" >
+                    <h4>Course 2:</h4><select id="s1c2" name="s1c2">
                             <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    <h4>Course 3:</h4><select id="s1c3" >
+                    <h4>Course 3:</h4><select id="s1c3" name="s1c3">
                            <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    <h4>Course 4:</h4><select id="s1c4" >
+                    <h4>Course 4:</h4><select id="s1c4" name="s1c4">
                             <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    <h4>Course 5:</h4><select id="s1c5" >
+                    <h4>Course 5:</h4><select id="s1c5" name="s1c5">
                             <option value="">&nbsp;</option>
                     </select>
                     <br>
-                    <h4>Course 6:</h4><select id="s1c6" >
+                    <h4>Course 6:</h4><select id="s1c6" name="s1c6">
                             <option value="">&nbsp;</option>
                     </select>
                 </div>
@@ -184,27 +184,27 @@
 		<div class='tab'>
                 <h3>Second Year, Fall</h3>
                 <div style='width: 90%'>    
-                    <h4>Course 1:</h4><select id="f2c1" >
+                    <h4>Course 1:</h4><select id="f2c1" name="f2c1">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 2:</h4><select id="f2c2" >
+                    <h4>Course 2:</h4><select id="f2c2" name="f2c2">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 3:</h4><select id="f2c3" >
+                    <h4>Course 3:</h4><select id="f2c3" name="f2c3">
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 4:</h4><select id="f2c4" >
+                    <h4>Course 4:</h4><select id="f2c4" name="f2c4">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 5:</h4><select id="f2c5" >
+                    <h4>Course 5:</h4><select id="f2c5" name="f2c5">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 6:</h4><select id="f2c6" >
+                    <h4>Course 6:</h4><select id="f2c6" name="f2c6">
                             <option value="">&nbsp;</option>
                                 </select>
                 </div>
@@ -215,27 +215,27 @@
 		<div class='tab'>
 				<h3>Second Year, Spring</h3>
 				<div style="width: 90%">
-					<h4>Course 1:</h4><select id="s2c1" >
+					<h4>Course 1:</h4><select id="s2c1" name="s2c1">
 						   <option value="">&nbsp;</option>
 								</select>
 					<br>
-					<h4>Course 2:</h4><select id="s2c2" >
+					<h4>Course 2:</h4><select id="s2c2" name="s2c2">
 							<option value="">&nbsp;</option>
 								</select>
 					<br>
-					<h4>Course 3:</h4><select id="s2c3" >
+					<h4>Course 3:</h4><select id="s2c3" name="s2c3">
 							<option value="">&nbsp;</option>
 								</select>
 					<br>
-					<h4>Course 4:</h4><select id="s2c4" >
+					<h4>Course 4:</h4><select id="s2c4" name="s2c4">
 							<option value="">&nbsp;</option>
 								</select>
 					<br>
-					<h4>Course 5:</h4><select id="s2c5" >
+					<h4>Course 5:</h4><select id="s2c5" name="s2c5">
 							<option value="">&nbsp;</option>
 								</select>
 					<br>
-					<h4>Course 6:</h4><select id="s2c6" >
+					<h4>Course 6:</h4><select id="s2c6" name="s2c6">
 							<option value="">&nbsp;</option>
 								</select>
 				</div>
@@ -246,27 +246,27 @@
 		<div class='tab'>
                 <h3>Third Year, Fall</h3>
                 <div style="width: 90%">    
-                	<h4>Course 1:</h4><select id="f3c1" >
+                	<h4>Course 1:</h4><select id="f3c1" name="f3c1">
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 2:</h4><select id="f3c2" >
+                    <h4>Course 2:</h4><select id="f3c2" name="f3c2">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 3:</h4><select id="f3c3" >
+                    <h4>Course 3:</h4><select id="f3c3" name="f3c3">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 4:</h4><select id="f3c4" >
+                    <h4>Course 4:</h4><select id="f3c4" name="f3c4">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 5:</h4><select id="f3c5" >
+                    <h4>Course 5:</h4><select id="f3c5" name="f3c5">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 6:</h4><select id="f3c6" >
+                    <h4>Course 6:</h4><select id="f3c6" name="f3c6">
                             <option value="">&nbsp;</option>
                                 </select>
                 </div>
@@ -277,27 +277,27 @@
 		<div class='tab'>
                 <h3>Third Year, Spring</h3>
                 <div style="width: 90%;">    
-                    <h4>Course 1:</h4><select id="s3c1" >
+                    <h4>Course 1:</h4><select id="s3c1" name="s3c1">
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 2:</h4><select id="s3c2" >
+                    <h4>Course 2:</h4><select id="s3c2" name="s3c2">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 3:</h4><select id="s3c3" >
+                    <h4>Course 3:</h4><select id="s3c3" name="s3c3">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 4:</h4><select id="s3c4" >
+                    <h4>Course 4:</h4><select id="s3c4" name="s3c4">
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 5:</h4><select id="s3c5" >
+                    <h4>Course 5:</h4><select id="s3c5" name="s3c5">
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 6:</h4><select id="s3c6" >
+                    <h4>Course 6:</h4><select id="s3c6" name="s3c6">
                            <option value="">&nbsp;</option>
                                 </select>
                 </div>
@@ -308,27 +308,27 @@
 		<div class='tab'>
                 <h3>Fourth Year, Fall</h3>
                 <div style="width: 90%">    
-                    <h4>Course 1:</h4><select id="f4c1" >
+                    <h4>Course 1:</h4><select id="f4c1" name="f4c1">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 2:</h4><select id="f4c2" >
+                    <h4>Course 2:</h4><select id="f4c2" name="f4c2">
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 3:</h4><select id="f4c3" >
+                    <h4>Course 3:</h4><select id="f4c3" name="f4c3">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 4:</h4><select id="f4c4" >
+                    <h4>Course 4:</h4><select id="f4c4" name="f4c4">
                            <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 5:</h4><select id="f4c5" >
+                    <h4>Course 5:</h4><select id="f4c5" name="f4c5">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 6:</h4><select id="f4c6" >
+                    <h4>Course 6:</h4><select id="f4c6" name="f4c6">
                             <option value="">&nbsp;</option>
                                 </select>
                 </div>
@@ -339,27 +339,27 @@
 		<div class='tab'>
                 <h3>Fourth Year, Spring</h3>
                 <div style='width: 90%;'>    
-                   <h4>Course 1:</h4><select id="s4c1" >
+                   <h4>Course 1:</h4><select id="s4c1" name="s4c1">
                           <option value="">&nbsp;</option>
                                 </select>
                 	<br>
-                    <h4>Course 2:</h4><select id="s4c2" >
+                    <h4>Course 2:</h4><select id="s4c2" name="s4c2">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 3:</h4><select id="s4c3" >
+                    <h4>Course 3:</h4><select id="s4c3" name="s4c3">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 4:</h4><select id="s4c4" >
+                    <h4>Course 4:</h4><select id="s4c4" name="s4c4">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 5:</h4><select id="s4c5" >
+                    <h4>Course 5:</h4><select id="s4c5" name="s4c5">
                             <option value="">&nbsp;</option>
                                 </select>
                     <br>
-                    <h4>Course 6:</h4><select id="s4c6" >
+                    <h4>Course 6:</h4><select id="s4c6" name="s4c6">
                            <option value="">&nbsp;</option>
                                 </select>
                 </div>
