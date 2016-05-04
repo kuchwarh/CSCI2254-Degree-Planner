@@ -16,7 +16,7 @@
 	
 	if (checkname($username) > 0) {
 		echo "<script>alert('Username in use.');
-		window.location.href='../adminhome.html';
+		window.location.href='../adminhome.html#two';
 		</script>";
 	} else {
 	
@@ -48,7 +48,7 @@
 	};
 	
 	echo "<script>alert('Student successfully signed-up.');
-		window.location.href='../adminhome.html';
+		window.location.href='../adminhome.html#two';
 		</script>";
 	
 	};

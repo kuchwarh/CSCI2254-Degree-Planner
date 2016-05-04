@@ -69,4 +69,4 @@
 	};
 	
 	disconnect_from_db($dbc, $result);
-	header("Location: ../studenthome.html");
+	header("Location: ../studenthome.html#two");
