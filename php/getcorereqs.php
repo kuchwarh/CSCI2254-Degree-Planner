@@ -14,7 +14,8 @@
 									  and req is not null)
 					  and r.id not in (select req
 					  				   from aps
-					  				   where student = e.student)";
+					  				   where student = e.student)
+				order by c.title";
 	
 	$result = perform_query($dbc, $query);
 	if ( mysqli_num_rows( $result ) == 0 ) {

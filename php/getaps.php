@@ -5,7 +5,8 @@
 	$dbc = connect_to_db('gonzalyz');
 	$query = "select reqs.id, class_cats.title from aps, reqs, class_cats
 			  where aps.student = '$id' and aps.req = reqs.id
-			  and reqs.class_cat = class_cats.id";
+			  and reqs.class_cat = class_cats.id
+			  order by class_cats.title";
 	$result = perform_query($dbc, $query);
 	if ( mysqli_num_rows( $result ) == 0 ) {
 		die("bad query $query");

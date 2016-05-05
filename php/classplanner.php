@@ -63,7 +63,8 @@
 			$query = "select c.title, r.number
 					  from class_cats as c, reqs as r, enroll as e where e.student = '$student' and c.id = r.class_cat and e.field = r.field
 					  and r.id not in (select req from plan where student = e.student and req is not null)
-					  and r.id not in (select req from aps where student = e.student)";
+					  and r.id not in (select req from aps where student = e.student)
+					  order by c.title";
 			$result = perform_query($dbc, $query);
 			$reqs = array();
 			while ($obj = mysqli_fetch_object($result)) {
@@ -91,7 +92,8 @@
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title from class_cats as c,reqs as r
 					  inner join aps as a on r.id = a.req
-	 				  where a.student = '$student' and r.class_cat = c.id";
+	 				  where a.student = '$student' and r.class_cat = c.id
+	 				  order by c.title";
 			$result = perform_query($dbc, $query);
 			$reqs = array();
 			while ($obj = mysqli_fetch_object($result)) {

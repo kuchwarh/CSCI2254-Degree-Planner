@@ -1,7 +1,7 @@
 <?php include("dbconn.php"); 
 	
 	$dbc = connect_to_db('gonzalyz');
-	$query = "select id, first_name, last_name from students";
+	$query = "select id, first_name, last_name from students order by last_name, first_name";
 	$result = perform_query($dbc, $query);
 	$students = array();
 	while ($obj = mysqli_fetch_object($result)) {
