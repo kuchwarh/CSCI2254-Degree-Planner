@@ -41,7 +41,21 @@ function checkName() {
 	
 	if (name == null || name == "") {
 		message = "Please enter a username."};	
-	
+		
+	var taken = new Array();
+	$.ajax({
+		url: "php/checkusername.php",
+		success: function(data) {
+			$.each(data, function(i, item) {
+				if (name == item.username) {
+					message = "Username is in use, please choose another."};
+			})
+		},
+		async: false,
+		dataType: "json",
+		error: function(req, err) {console.log(err);}
+	});
+
 	document.getElementById("nameError").innerHTML = message;
 	
 	if (message == null) {
@@ -70,6 +84,30 @@ function checkPassword() {
 
 document.getElementById("password").addEventListener("blur", checkPassword, false);
 
+function checkPassword2() {
+
+	var pw2 = document.getElementById("password2").value;
+	var pw = document.getElementById("password").value;
+	var message = null;
+	
+	if (pw2 == null || pw2 == "") {
+		message = "Please confirm your password.";
+	} else {
+		if (!(pw == pw2)) {
+			message = "Passwords do not match.";
+		};
+	};
+	
+	document.getElementById("password2Error").innerHTML = message;
+	
+	if (message == null) {
+		return true;}
+	else {return false;};
+	
+};
+
+document.getElementById("password2").addEventListener("blur", checkPassword2, false);
+
 function checkSchool() {
 
 	var school = document.getElementById("school").value;
@@ -94,9 +132,10 @@ function validate(event) {
 	checkLast();
 	checkName();
 	checkPassword();
+	checkPassword2();
 	checkSchool();
 
-	if (checkFirst() && checkLast() && checkName() && checkPassword() && checkSchool()) {
+	if (checkFirst() && checkLast() && checkName() && checkPassword() && checkPassword2() && checkSchool()) {
 		return true;}
 	else {
 		event.preventDefault();
