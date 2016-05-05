@@ -337,7 +337,7 @@
         </div>
         </section>
         
-        <section class='wrapper style1'>
+        <section class='wrapper style1' style="margin-bottom: 7em">
 		<div class='tab'>
                 <h3>Fourth Year, Spring</h3>
                 <div style='width: 90%;'>    
@@ -367,7 +367,7 @@
                 </div>
            </div>
            </section>
-           <section class="wrapper style2 special">
+           <section id="submitsection" class="wrapper style2 special">
             <input type= "submit" name="update" id="update" value="Update Course Plan"> 
             <br>
            </section>       

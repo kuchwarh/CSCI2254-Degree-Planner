@@ -31,7 +31,7 @@
 	<section class="wrapper style1">
 		<div class='tab'>
 		<h3>Unassigned Requirements</h3>
-		<div style="overflow: scroll; height: 160px;">
+		<div style="overflow: scroll; height: 200px;">
 		<?php
 			$dbc = connect_to_db('gonzalyz');
 			$query = "select c.title, r.number
